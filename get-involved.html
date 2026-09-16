@@ -356,141 +356,113 @@
   </aside>
 
   <main id="main-content">
-    
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-      <div class="container page-hero-content fade-up">
-        <div class="eyebrow eyebrow-pill">COMMUNITY ACTION</div>
-        <h1 class="page-hero-title">
-          Three Doors into <span class="serif-italic text-accent">Our Mission.</span>
-        </h1>
-        <p class="lead-text" style="margin: 0 auto;">
-          Whether through financial stewardship, active volunteer mentorship, or organizational partnership, your involvement builds real stability for newcomer African families.
-        </p>
-      </div>
-    </section>
-
-    <!-- SECTION 1: GIVE / DONATE -->
-    <section id="donate" class="section-padding">
-      <div class="container">
-        <div class="donate-split-grid">
-          
-          <div class="fade-up">
-            <div class="eyebrow" style="color: var(--color-accent);">PATHWAY 01 • INVEST</div>
-            <h2 class="section-title">Support Amani Kids Financially</h2>
-            <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
-              As an independent 501(c)(3) nonprofit, we rely on generous individuals, community foundations, and allies to sustain our grassroots operations.
-            </p>
-
-            <div style="background-color: var(--color-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
-              <h4 style="font-size: 1.0625rem; color: var(--color-primary); margin-bottom: 0.75rem;">Where Your Dollars Go:</h4>
-              <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                  <strong style="color: var(--color-accent);">$35:</strong>
-                  <span>Provides a newcomer student with bilingual learning books and school supplies.</span>
-                </li>
-                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                  <strong style="color: var(--color-accent);">$75:</strong>
-                  <span>Funds one month of after-school academic literacy coaching at Sauti Safe Space.</span>
-                </li>
-                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                  <strong style="color: var(--color-accent);">$150:</strong>
-                  <span>Covers bus transit and translation support for a family attending medical appointments.</span>
-                </li>
-                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
-                  <strong style="color: var(--color-accent);">$500:</strong>
-                  <span>Sponsors children's games, drumming, and food stations at Bisakana Day.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.5;">
-              * All donations are 100% tax-deductible under U.S. IRS 501(c)(3) regulations. Official donor receipts issued immediately.
-            </div>
-          </div>
-
-          <!-- Donation Card Form -->
-          <div class="donate-card fade-up">
-            <div class="donate-card-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              <span>TAX-DEDUCTIBLE GIVING</span>
-            </div>
-            <h3 class="donate-card-title">Make an Immediate Gift</h3>
-
-            <form data-amani-form="donate" id="donation-form">
-              <div class="form-alert" role="alert"></div>
-
-              <div class="form-group">
-                <label class="form-label">Select Contribution Amount</label>
-                <div class="donation-amount-grid">
-                  <button type="button" class="donation-preset-btn" data-amount="35">$35</button>
-                  <button type="button" class="donation-preset-btn is-active" data-amount="75">$75</button>
-                  <button type="button" class="donation-preset-btn" data-amount="150">$150</button>
-                  <button type="button" class="donation-preset-btn" data-amount="500">$500</button>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="custom-amount">Or Enter Custom Amount ($ USD) *</label>
-                <div class="input-currency-wrapper">
-                  <span class="input-currency-symbol">$</span>
-                  <input class="form-control" type="number" id="custom-amount" name="amount" required min="5" value="75">
-                </div>
-              </div>
-
-              <div class="form-row-2">
-                <div class="form-group">
-                  <label class="form-label" for="donor-first">First Name *</label>
-                  <input class="form-control" type="text" id="donor-first" name="first_name" required placeholder="First name">
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="donor-last">Last Name *</label>
-                  <input class="form-control" type="text" id="donor-last" name="last_name" required placeholder="Last name">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="donor-email">Email for Tax Receipt *</label>
-                <input class="form-control" type="email" id="donor-email" name="email" required placeholder="donor@example.com">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label">Gift Frequency</label>
-                <div class="frequency-segmented-control" role="radiogroup">
-                  <label class="frequency-option">
-                    <input type="radio" name="frequency" value="one-time" checked>
-                    <span class="frequency-label-pill">One-time gift</span>
-                  </label>
-                  <label class="frequency-option">
-                    <input type="radio" name="frequency" value="monthly">
-                    <span class="frequency-label-pill">Monthly sustaining ❤️</span>
-                  </label>
-                </div>
-              </div>
-
-              <button type="submit" id="donation-submit-btn" class="btn btn-accent btn-lg" style="width: 100%; margin-top: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                <span id="donation-submit-text">Complete $75 Donation</span>
-              </button>
-
-              <div class="donation-trust-badges">
-                <div class="trust-badge-item">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>501(c)(3) Tax Deductible</span>
-                </div>
-                <div class="trust-badge-item">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                  <span>Instant IRS Receipt</span>
-                </div>
-                <div class="trust-badge-item">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                  <span>256-Bit SSL Encrypted</span>
-                </div>
-              </div>
-            </form>
-          </div>
-
+    <!-- DIRECT DONATION PORTAL (ZERO SCROLL — IMMEDIATE FORM) -->
+    <section id="donate" class="donate-direct-portal">
+      <div class="container container-narrow">
+        
+        <div class="donate-header-compact fade-up">
+          <div class="eyebrow eyebrow-pill" style="margin: 0 auto 0.65rem auto; width: fit-content;">501(c)(3) TAX-DEDUCTIBLE GIVING</div>
+          <h1 class="page-hero-title" style="font-size: clamp(2rem, 4.5vw, 2.75rem); margin-bottom: 0.5rem; line-height: 1.15;">
+            Support <span class="serif-italic text-accent">Amani Kids.</span>
+          </h1>
+          <p class="lead-text" style="max-width: 580px; margin: 0 auto 1.25rem auto; font-size: clamp(0.95rem, 1.8vw, 1.05rem); color: var(--color-text-muted);">
+            Your gift provides newcomer African refugee youth in Charlotte with bilingual education, literacy coaching, and emergency family stability.
+          </p>
         </div>
+
+        <!-- Donation Card Form (Centered, Tactile, Immediate) -->
+        <div class="donate-card fade-up">
+          <div class="donate-card-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>MAKE AN IMMEDIATE GIFT</span>
+          </div>
+
+          <form data-amani-form="donate" id="donation-form">
+            <div class="form-alert" role="alert"></div>
+
+            <div class="form-group">
+              <label class="form-label">Select Contribution Amount</label>
+              <div class="donation-amount-grid">
+                <button type="button" class="donation-preset-btn" data-amount="35">$35</button>
+                <button type="button" class="donation-preset-btn is-active" data-amount="75">$75</button>
+                <button type="button" class="donation-preset-btn" data-amount="150">$150</button>
+                <button type="button" class="donation-preset-btn" data-amount="500">$500</button>
+              </div>
+              <!-- Real-time dynamic impact pill -->
+              <div id="donation-impact-banner" class="donation-impact-banner">
+                <span class="impact-sparkle">💡</span>
+                <span id="donation-impact-desc">Funds 1 month of after-school academic literacy coaching at Sauti Safe Space.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="custom-amount">Or Enter Custom Amount ($ USD) *</label>
+              <div class="input-currency-wrapper">
+                <span class="input-currency-symbol">$</span>
+                <input class="form-control" type="number" id="custom-amount" name="amount" required min="5" value="75">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="donor-first">First Name *</label>
+                <input class="form-control" type="text" id="donor-first" name="first_name" required placeholder="First name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="donor-last">Last Name *</label>
+                <input class="form-control" type="text" id="donor-last" name="last_name" required placeholder="Last name">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="donor-email">Email for Tax Receipt *</label>
+              <input class="form-control" type="email" id="donor-email" name="email" required placeholder="donor@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Gift Frequency</label>
+              <div class="frequency-segmented-control" role="radiogroup">
+                <label class="frequency-option">
+                  <input type="radio" name="frequency" value="one-time" checked>
+                  <span class="frequency-label-pill">One-time gift</span>
+                </label>
+                <label class="frequency-option">
+                  <input type="radio" name="frequency" value="monthly">
+                  <span class="frequency-label-pill">Monthly sustaining ❤️</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" id="donation-submit-btn" class="btn btn-accent btn-lg" style="width: 100%; margin-top: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span id="donation-submit-text">Complete $75 Donation</span>
+            </button>
+
+            <div class="donation-trust-badges">
+              <div class="trust-badge-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>501(c)(3) Tax Deductible</span>
+              </div>
+              <div class="trust-badge-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Instant IRS Receipt</span>
+              </div>
+              <div class="trust-badge-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>256-Bit SSL Encrypted</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Quick pathway links to Volunteer & Partner -->
+        <div class="other-pathways-bar fade-up">
+          <span>Other ways to support:</span>
+          <a href="get-involved.html#volunteer" class="pathway-link">Volunteer as Mentor →</a>
+          <span class="pathway-sep">•</span>
+          <a href="get-involved.html#partner" class="pathway-link">Institutional Alliances →</a>
+        </div>
+
       </div>
     </section>
 

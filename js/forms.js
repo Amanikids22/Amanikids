@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const presetBtns = donationForm.querySelectorAll('.donation-preset-btn');
     const customInput = document.getElementById('custom-amount');
     const submitText = document.getElementById('donation-submit-text');
+    const impactDesc = document.getElementById('donation-impact-desc');
+
+    const impactMap = {
+      '35': 'Provides a newcomer student with bilingual learning books and school supplies.',
+      '75': 'Funds 1 month of after-school academic literacy coaching at Sauti Safe Space.',
+      '150': 'Covers bus transit and translation support for a family attending medical appointments.',
+      '500': 'Sponsors children’s games, drumming, and food stations at Bisakana Day festival.'
+    };
 
     const updateSubmitButton = (val) => {
       const num = parseInt(val, 10);
@@ -22,6 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    const updateImpact = (val) => {
+      if (!impactDesc) return;
+      const num = parseInt(val, 10);
+      if (impactMap[val]) {
+        impactDesc.textContent = impactMap[val];
+      } else if (!isNaN(num) && num >= 500) {
+        impactDesc.textContent = `Generously sponsors cultural festival operations and family supplies ($${num} USD).`;
+      } else if (!isNaN(num) && num >= 150) {
+        impactDesc.textContent = `Covers vital medical transit, translation, and school coaching ($${num} USD).`;
+      } else if (!isNaN(num) && num >= 75) {
+        impactDesc.textContent = `Supports after-school mentoring and homework coaching ($${num} USD).`;
+      } else if (!isNaN(num) && num >= 5) {
+        impactDesc.textContent = `Supplies essential bilingual books and classroom materials ($${num} USD).`;
+      } else {
+        impactDesc.textContent = 'Empowers newcomer African refugee children with essential education and care.';
+      }
+    };
+
     presetBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         presetBtns.forEach(b => b.classList.remove('is-active'));
@@ -31,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
           customInput.value = amount;
         }
         updateSubmitButton(amount);
+        updateImpact(amount);
       });
     });
 
@@ -45,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
         updateSubmitButton(val);
+        updateImpact(val);
       });
     }
   }

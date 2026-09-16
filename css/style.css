@@ -4108,3 +4108,64 @@ textarea.form-control {
   flex-shrink: 0;
 }
 
+/* Compact Direct Donation Portal */
+.donate-direct-portal {
+  padding-top: calc(var(--header-height, 70px) + 2rem);
+  padding-bottom: 4.5rem;
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.donate-header-compact {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.donation-impact-banner {
+  background: rgba(204, 88, 51, 0.08);
+  border: 1px solid rgba(204, 88, 51, 0.22);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  margin-top: 0.65rem;
+  font-size: 0.84rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.4;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.donation-impact-banner .impact-sparkle {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.other-pathways-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.pathway-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pathway-link:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+.pathway-sep {
+  color: var(--color-border);
+}
+

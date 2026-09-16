@@ -767,5 +767,10 @@ html, body {
     width: 36px !important;
     height: 36px !important;
   }
+
+  .donate-direct-portal {
+    padding-top: calc(var(--header-height, 64px) + 0.85rem) !important;
+    padding-bottom: 2.5rem !important;
+  }
 }
 
