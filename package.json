@@ -4,6 +4,6 @@
   "private": true,
   "description": "AMANI KIDS official web platform",
   "scripts": {
-    "build": "echo 'Build successful'"
+    "build": "echo 'Static build ready'"
   }
 }
