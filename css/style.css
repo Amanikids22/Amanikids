@@ -3915,3 +3915,196 @@ textarea.form-control {
   background-color: var(--color-gold);
 }
 
+/* ==========================================================================
+   26. DEDICATED DONATION & ACTION PORTAL SUITE (High-Conversion Editorial UX)
+   ========================================================================== */
+.donate-split-grid,
+.volunteer-split-grid,
+.partner-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.volunteer-split-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.featured-event-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: stretch;
+}
+
+/* Two-column form fields */
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* The Donation Card */
+.donate-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--color-primary);
+  padding: clamp(2rem, 4vw, 3rem);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(30, 58, 47, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.donate-card-badge {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.donate-card-title {
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+/* Preset Donation Buttons Grid */
+.donation-amount-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.donation-preset-btn {
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.75rem 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  outline: none;
+}
+
+.donation-preset-btn:hover {
+  border-color: var(--color-accent);
+  background: rgba(204, 88, 51, 0.06);
+  transform: translateY(-2px);
+}
+
+.donation-preset-btn.is-active {
+  background-color: var(--color-accent) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 4px 14px rgba(204, 88, 51, 0.35);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Custom amount field with prefix */
+.input-currency-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-currency-symbol {
+  position: absolute;
+  left: 1.15rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.input-currency-wrapper .form-control {
+  padding-left: 2.25rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+}
+
+/* Frequency Segmented Control */
+.frequency-segmented-control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-bg-alt);
+  padding: 0.35rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  gap: 0.25rem;
+  margin-top: 0.35rem;
+}
+
+.frequency-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.frequency-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.frequency-label-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.frequency-option input:checked + .frequency-label-pill {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Trust Badges Strip */
+.donation-trust-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.trust-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.trust-badge-item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+

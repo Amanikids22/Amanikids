@@ -374,7 +374,7 @@
     <section id="bisakana" class="section-padding">
       <div class="container">
         <div style="background-color: var(--color-surface); border-radius: var(--radius-xl); border: 1px solid var(--color-border); overflow: hidden; box-shadow: var(--shadow-lg);" class="fade-up">
-          <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: stretch;">
+          <div class="featured-event-grid">
             
             <div style="padding: clamp(2rem, 5vw, 3.5rem); display: flex; flex-direction: column; justify-content: center;">
               <div style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: var(--color-accent-soft); color: var(--color-accent); font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill); margin-bottom: 1rem; width: fit-content;">
@@ -388,7 +388,7 @@
                 "Play, Dance, Taste, Belong" • Lingala: Bisakana
               </div>
 
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.75rem; background-color: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border-subtle);">
+              <div class="form-row-2" style="margin-bottom: 1.75rem; background-color: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border-subtle);">
                 <div>
                   <strong style="font-size: 0.8125rem; color: var(--color-text-light); text-transform: uppercase; font-family: var(--font-mono); display: block;">DATE & TIME</strong>
                   <span style="font-size: 1rem; font-weight: 700; color: var(--color-primary);">Saturday, Oct 17 • 11:00 AM – 5:00 PM</span>
@@ -429,7 +429,7 @@
           <p class="lead-text">Intimate circles designed for learning, family support, and mutual empowerment.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem;" class="fade-up">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.75rem;" class="fade-up">
           
           <!-- Event 1 -->
           <div style="background-color: var(--color-surface); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
@@ -496,7 +496,7 @@
           <form data-amani-form="event">
             <div class="form-alert" role="alert"></div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div class="form-row-2">
               <div class="form-group">
                 <label class="form-label" for="rsvp-name">Full Name *</label>
                 <input class="form-control" type="text" id="rsvp-name" name="name" required placeholder="Your name">
@@ -507,7 +507,7 @@
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div class="form-row-2">
               <div class="form-group">
                 <label class="form-label" for="rsvp-phone">Phone Number</label>
                 <input class="form-control" type="tel" id="rsvp-phone" name="phone" placeholder="(704) 000-0000">

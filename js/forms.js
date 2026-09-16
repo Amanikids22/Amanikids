@@ -1,9 +1,55 @@
 /**
  * AMANI KIDS — FORM CONTROLLER (Vanilla JS)
- * Accessible form validation, field interaction states, and simulated submission feedback.
+ * Accessible form validation, field interaction states, tactile donation amounts, and simulated submission feedback.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 1. Tactile Donation Amount & Submit Text Controller
+  const donationForm = document.getElementById('donation-form');
+  if (donationForm) {
+    const presetBtns = donationForm.querySelectorAll('.donation-preset-btn');
+    const customInput = document.getElementById('custom-amount');
+    const submitText = document.getElementById('donation-submit-text');
+
+    const updateSubmitButton = (val) => {
+      const num = parseInt(val, 10);
+      if (submitText) {
+        if (!isNaN(num) && num > 0) {
+          submitText.textContent = `Complete $${num} USD Donation`;
+        } else {
+          submitText.textContent = 'Complete Secure Donation';
+        }
+      }
+    };
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        presetBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const amount = btn.getAttribute('data-amount');
+        if (customInput) {
+          customInput.value = amount;
+        }
+        updateSubmitButton(amount);
+      });
+    });
+
+    if (customInput) {
+      customInput.addEventListener('input', () => {
+        const val = customInput.value;
+        presetBtns.forEach(btn => {
+          if (btn.getAttribute('data-amount') === val) {
+            btn.classList.add('is-active');
+          } else {
+            btn.classList.remove('is-active');
+          }
+        });
+        updateSubmitButton(val);
+      });
+    }
+  }
+
+  // 2. Universal Form Submission Handler
   const forms = document.querySelectorAll('form[data-amani-form]');
 
   forms.forEach(form => {
@@ -37,24 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Button loading state
-      const originalText = submitBtn ? submitBtn.textContent : 'Submit';
+      const originalHtml = submitBtn ? submitBtn.innerHTML : 'Submit';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
+        submitBtn.textContent = 'Processing securely...';
       }
 
       // Simulate network request
       setTimeout(() => {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
+          submitBtn.innerHTML = originalHtml;
         }
 
         form.reset();
 
         if (alertContainer) {
           alertContainer.className = 'form-alert success';
-          if (formType === 'support') {
+          if (formType === 'donate') {
+            alertContainer.textContent = 'Thank you deeply for your generous gift to AMANI KIDS! Your donation is 100% tax-deductible, and an official IRS 501(c)(3) tax receipt has been emailed to you.';
+          } else if (formType === 'support') {
             alertContainer.textContent = 'Thank you for reaching out. An Amani Kids coordinator will contact you warmly within 24–48 hours to connect your family with trusted resources.';
           } else if (formType === 'volunteer') {
             alertContainer.textContent = 'Thank you for stepping forward to serve! Our team will review your volunteer interest and get in touch with orientation details.';

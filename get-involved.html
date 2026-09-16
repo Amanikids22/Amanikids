@@ -373,7 +373,7 @@
     <!-- SECTION 1: GIVE / DONATE -->
     <section id="donate" class="section-padding">
       <div class="container">
-        <div class="challenge-grid" style="grid-template-columns: 1fr 1.1fr; align-items: flex-start;">
+        <div class="donate-split-grid">
           
           <div class="fade-up">
             <div class="eyebrow" style="color: var(--color-accent);">PATHWAY 01 • INVEST</div>
@@ -383,44 +383,62 @@
             </p>
 
             <div style="background-color: var(--color-surface); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
-              <h4 style="font-size: 1.0625rem; color: var(--color-primary); margin-bottom: 0.5rem;">Where Your Dollars Go:</h4>
-              <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9375rem; color: var(--color-text-muted);">
-                <li><strong>$35:</strong> Provides a newcomer student with bilingual learning books and school supplies.</li>
-                <li><strong>$75:</strong> Funds one month of after-school academic literacy coaching at Sauti Safe Space.</li>
-                <li><strong>$150:</strong> Covers bus transit and translation support for a family attending medical appointments.</li>
-                <li><strong>$500:</strong> Sponsors children's games, drumming, and food stations at Bisakana Day.</li>
+              <h4 style="font-size: 1.0625rem; color: var(--color-primary); margin-bottom: 0.75rem;">Where Your Dollars Go:</h4>
+              <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9375rem; color: var(--color-text-muted);">
+                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                  <strong style="color: var(--color-accent);">$35:</strong>
+                  <span>Provides a newcomer student with bilingual learning books and school supplies.</span>
+                </li>
+                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                  <strong style="color: var(--color-accent);">$75:</strong>
+                  <span>Funds one month of after-school academic literacy coaching at Sauti Safe Space.</span>
+                </li>
+                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                  <strong style="color: var(--color-accent);">$150:</strong>
+                  <span>Covers bus transit and translation support for a family attending medical appointments.</span>
+                </li>
+                <li style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                  <strong style="color: var(--color-accent);">$500:</strong>
+                  <span>Sponsors children's games, drumming, and food stations at Bisakana Day.</span>
+                </li>
               </ul>
             </div>
 
-            <div style="font-size: 0.875rem; color: var(--color-text-light);">
+            <div style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.5;">
               * All donations are 100% tax-deductible under U.S. IRS 501(c)(3) regulations. Official donor receipts issued immediately.
             </div>
           </div>
 
           <!-- Donation Card Form -->
-          <div style="background-color: var(--color-surface); border-radius: var(--radius-xl); border: 1.5px solid var(--color-primary); padding: clamp(2rem, 5vw, 3rem); box-shadow: var(--shadow-md);" class="fade-up">
-            <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-accent); font-weight: 700; margin-bottom: 0.5rem;">TAX-DEDUCTIBLE GIVING</div>
-            <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Make an Immediate Gift</h3>
+          <div class="donate-card fade-up">
+            <div class="donate-card-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>TAX-DEDUCTIBLE GIVING</span>
+            </div>
+            <h3 class="donate-card-title">Make an Immediate Gift</h3>
 
-            <form data-amani-form="donate">
+            <form data-amani-form="donate" id="donation-form">
               <div class="form-alert" role="alert"></div>
 
               <div class="form-group">
                 <label class="form-label">Select Contribution Amount</label>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 0.5rem;">
-                  <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('custom-amount').value = '35'">$35</button>
-                  <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('custom-amount').value = '75'">$75</button>
-                  <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('custom-amount').value = '150'">$150</button>
-                  <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('custom-amount').value = '500'">$500</button>
+                <div class="donation-amount-grid">
+                  <button type="button" class="donation-preset-btn" data-amount="35">$35</button>
+                  <button type="button" class="donation-preset-btn is-active" data-amount="75">$75</button>
+                  <button type="button" class="donation-preset-btn" data-amount="150">$150</button>
+                  <button type="button" class="donation-preset-btn" data-amount="500">$500</button>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="custom-amount">Or Enter Custom Amount ($ USD) *</label>
-                <input class="form-control" type="number" id="custom-amount" name="amount" required min="5" value="75">
+                <div class="input-currency-wrapper">
+                  <span class="input-currency-symbol">$</span>
+                  <input class="form-control" type="number" id="custom-amount" name="amount" required min="5" value="75">
+                </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div class="form-row-2">
                 <div class="form-group">
                   <label class="form-label" for="donor-first">First Name *</label>
                   <input class="form-control" type="text" id="donor-first" name="first_name" required placeholder="First name">
@@ -438,19 +456,37 @@
 
               <div class="form-group">
                 <label class="form-label">Gift Frequency</label>
-                <div style="display: flex; gap: 1.5rem; margin-top: 0.25rem; font-size: 0.9375rem;">
-                  <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
-                    <input type="radio" name="frequency" value="one-time" checked style="accent-color: var(--color-accent);"> One-time gift
+                <div class="frequency-segmented-control" role="radiogroup">
+                  <label class="frequency-option">
+                    <input type="radio" name="frequency" value="one-time" checked>
+                    <span class="frequency-label-pill">One-time gift</span>
                   </label>
-                  <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
-                    <input type="radio" name="frequency" value="monthly" style="accent-color: var(--color-accent);"> Monthly sustaining
+                  <label class="frequency-option">
+                    <input type="radio" name="frequency" value="monthly">
+                    <span class="frequency-label-pill">Monthly sustaining ❤️</span>
                   </label>
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-accent btn-lg" style="width: 100%; margin-top: 1rem;">
-                Proceed to Secure Donation
+              <button type="submit" id="donation-submit-btn" class="btn btn-accent btn-lg" style="width: 100%; margin-top: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span id="donation-submit-text">Complete $75 Donation</span>
               </button>
+
+              <div class="donation-trust-badges">
+                <div class="trust-badge-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>501(c)(3) Tax Deductible</span>
+                </div>
+                <div class="trust-badge-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span>Instant IRS Receipt</span>
+                </div>
+                <div class="trust-badge-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>256-Bit SSL Encrypted</span>
+                </div>
+              </div>
             </form>
           </div>
 
@@ -461,10 +497,10 @@
     <!-- SECTION 2: VOLUNTEER -->
     <section id="volunteer" class="section-padding bg-warm-alt">
       <div class="container">
-        <div class="challenge-grid" style="grid-template-columns: 1.1fr 0.9fr; align-items: flex-start;">
+        <div class="volunteer-split-grid">
           
           <!-- Volunteer Form -->
-          <div style="background-color: var(--color-surface); border-radius: var(--radius-xl); border: 1px solid var(--color-border); padding: clamp(2rem, 5vw, 3rem); box-shadow: var(--shadow-md);" class="fade-up">
+          <div class="donate-card fade-up" style="border: 1px solid var(--color-border);">
             <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem;">COMMUNITY SERVICE</div>
             <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Volunteer Application</h3>
 
@@ -476,7 +512,7 @@
                 <input class="form-control" type="text" id="vol-name" name="name" required placeholder="Your full name">
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div class="form-row-2">
                 <div class="form-group">
                   <label class="form-label" for="vol-email">Email Address *</label>
                   <input class="form-control" type="email" id="vol-email" name="email" required placeholder="you@example.com">
@@ -541,7 +577,7 @@
     <!-- SECTION 3: PARTNER -->
     <section id="partner" class="section-padding">
       <div class="container container-narrow fade-up">
-        <div style="background-color: var(--color-surface); border-radius: var(--radius-xl); border: 1px solid var(--color-border); padding: clamp(2.5rem, 5vw, 3.5rem); box-shadow: var(--shadow-md);">
+        <div class="donate-card" style="border: 1px solid var(--color-border);">
           <div class="eyebrow">PATHWAY 03 • COLLABORATE</div>
           <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">Institutional Partnerships</h2>
           <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 2rem;">
@@ -551,7 +587,7 @@
           <form data-amani-form="partner">
             <div class="form-alert" role="alert"></div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div class="form-row-2">
               <div class="form-group">
                 <label class="form-label" for="partner-org">Organization Name *</label>
                 <input class="form-control" type="text" id="partner-org" name="organization" required placeholder="Company, School or Agency">
@@ -562,7 +598,7 @@
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div class="form-row-2">
               <div class="form-group">
                 <label class="form-label" for="partner-email">Email Address *</label>
                 <input class="form-control" type="email" id="partner-email" name="email" required placeholder="partner@domain.org">
