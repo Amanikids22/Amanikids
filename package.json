@@ -1,0 +1,9 @@
+{
+  "name": "amanikids",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AMANI KIDS official web platform",
+  "scripts": {
+    "build": "echo 'Build successful'"
+  }
+}
