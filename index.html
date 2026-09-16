@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1E3A2F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <title>AMANI KIDS — Helping African Children & Families Thrive in a New Home</title>
+  <meta name="description" content="Amani Kids is an accredited 501(c)(3) nonprofit in Charlotte, NC connecting African refugee, immigrant, and newcomer families with trusted resources, educational support, and community belonging.">
+  <meta name="keywords" content="Amani Kids, Amani Kids Charlotte, African immigrant families Charlotte, African refugee families Charlotte, African diaspora children Charlotte, newcomer families Charlotte, Bisakana Day">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AMANI KIDS — Helping African Children & Families Thrive">
+  <meta property="og:description" content="Connecting African refugee, immigrant, and newcomer families with trusted resources, cultural belonging, and educational support in Charlotte, NC.">
+  <meta property="og:url" content="https://www.amanikidsnc.org/">
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Cormorant Garamond, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- SVG Noise Filter for Organic Texture -->
+  <svg class="noise-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+  </svg>
+
+      <!-- 1. FLOATING NAVIGATION ISLAND (ELITE EDITORIAL ARCHITECTURE) -->
+  <header class="site-header" role="banner">
+    <div class="nav-island">
+      <a href="index.html" class="brand-logo notranslate" translate="no" aria-label="AMANI KIDS Home">
+        <img src="images/amani_logo.png" alt="AMANI KIDS - Peace Love and Joy" class="site-logo-img">
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+        <!-- 1. About Dropdown -->
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link-dropdown" aria-expanded="false" aria-haspopup="true">
+            <span data-i18n="nav.about">About</span>
+            <span class="nav-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="about.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.about_amani">About AMANI</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_about">Mission, history & Charlotte roots</span>
+            </a>
+            <a href="team.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.team">Meet Our Team</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_team">12 leadership & community advocates</span>
+            </a>
+            <a href="impact.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.verified_impact">Verified Impact</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_impact">Accountability, metrics & outcomes</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Programs Dropdown -->
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link-dropdown" aria-expanded="false" aria-haspopup="true">
+            <span data-i18n="nav.programs">Programs</span>
+            <span class="nav-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="programs.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.all_programs">All Programs</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_all_programs">Education & family navigation</span>
+            </a>
+            <a href="programs.html#education" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.literacy_tutoring">After-School Tutoring</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_tutoring">Literacy, tutoring & homework lab</span>
+            </a>
+            <a href="programs.html#navigation" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.case_navigation">Family Case Navigation</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_case_nav">School enrollment & healthcare bridge</span>
+            </a>
+            <a href="programs.html#youth" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.cultural_enrichment">Youth Cultural Enrichment</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_youth">Creative arts & peer mentorship</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Community Dropdown -->
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link-dropdown" aria-expanded="false" aria-haspopup="true">
+            <span data-i18n="nav.community">Community</span>
+            <span class="nav-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="stories.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.family_stories">Family Stories</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_stories">Firsthand resettlement journeys</span>
+            </a>
+            <a href="events.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.events_bisakana">Events & Festivals</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_events">Bisakana Day & celebrations</span>
+            </a>
+            <a href="album.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.photo_album">Community Album</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_album">Moments of connection, pride & joy</span>
+            </a>
+            <a href="blog.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.journal_blog">Journal & Blog</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_blog">News, updates & family guides</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Get Involved Dropdown -->
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link-dropdown" aria-expanded="false" aria-haspopup="true">
+            <span data-i18n="nav.get_involved">Get Involved</span>
+            <span class="nav-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="get-involved.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.ways_to_help">Ways to Support</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_ways">Overview of community pathways</span>
+            </a>
+            <a href="get-involved.html#donate" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.donate_item">Donate Financially</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_donate">100% tax-deductible contribution</span>
+            </a>
+            <a href="get-involved.html#volunteer" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.volunteer_item">Volunteer as Mentor</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_volunteer">Tutor youth & guide families</span>
+            </a>
+            <a href="get-involved.html#partner" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-title" data-i18n="nav.partner_item">Partner with Us</span>
+              <span class="nav-dropdown-desc" data-i18n="nav.desc_partner">Schools & organizational alliances</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Contact (Direct Link) -->
+        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Minimalist Luxury Language Switcher -->
+        <div class="lang-selector" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+          <span class="lang-divider">/</span>
+          <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        </div>
+
+        <!-- Quiet Luxury Get Support Link -->
+        <a href="get-support.html" class="nav-support-link" data-i18n="nav.get_support">Get Support</a>
+
+        <!-- Elite Sculptural Donate CTA -->
+        <a href="get-involved.html#donate" class="btn-elite-donate">
+          <span data-i18n="nav.donate">DONATE</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- MOBILE NAVIGATION DRAWER (Accordion Architecture) -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo notranslate" translate="no" aria-label="AMANI KIDS Home">
+        <img src="images/amani_logo.png" alt="AMANI KIDS - Peace Love and Joy" class="site-logo-img" style="height: 38px;">
+      </a>
+      
+      <div class="lang-selector" aria-label="Mobile Language Selector">
+        <span class="lang-icon" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span>
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">/</span>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+      </div>
+
+      <button class="mobile-close-btn" aria-label="Close Mobile Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links" role="navigation" aria-label="Mobile Navigation">
+      <!-- Home Link -->
+      <a href="index.html" class="mobile-nav-link-simple" data-i18n="nav.home">Home</a>
+
+      <!-- About Us Accordion -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-accordion-header" aria-expanded="false">
+          <span data-i18n="nav.about_us">About Us</span>
+          <span class="mobile-accordion-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="mobile-accordion-body">
+          <a href="about.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.about_amani">About AMANI</span>
+          </a>
+          <a href="team.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.team">Meet Our Team</span>
+          </a>
+          <a href="impact.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.verified_impact">Verified Impact</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Programs Accordion -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-accordion-header" aria-expanded="false">
+          <span data-i18n="nav.programs">Programs</span>
+          <span class="mobile-accordion-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="mobile-accordion-body">
+          <a href="programs.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.all_programs">All Programs</span>
+          </a>
+          <a href="programs.html#education" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.literacy_tutoring">After-School Tutoring</span>
+          </a>
+          <a href="programs.html#navigation" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.case_navigation">Family Case Navigation</span>
+          </a>
+          <a href="programs.html#youth" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.cultural_enrichment">Youth Cultural Enrichment</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Standalone Direct Album Link -->
+      <a href="album.html" class="mobile-nav-link-simple" data-i18n="nav.album">Album</a>
+
+      <!-- Community Accordion -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-accordion-header" aria-expanded="false">
+          <span data-i18n="nav.community">Community</span>
+          <span class="mobile-accordion-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="mobile-accordion-body">
+          <a href="stories.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.family_stories">Family Stories</span>
+          </a>
+          <a href="events.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.events_bisakana">Events & Festivals</span>
+          </a>
+          <a href="album.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.photo_album">Community Album</span>
+          </a>
+          <a href="blog.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.journal_blog">Journal & Blog</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Get Involved Accordion -->
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-accordion-header" aria-expanded="false">
+          <span data-i18n="nav.get_involved">Get Involved</span>
+          <span class="mobile-accordion-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+        <div class="mobile-accordion-body">
+          <a href="get-involved.html" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.ways_to_help">Ways to Support</span>
+          </a>
+          <a href="get-involved.html#donate" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.donate_item">Donate Financially</span>
+          </a>
+          <a href="get-involved.html#volunteer" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.volunteer_item">Volunteer as Mentor</span>
+          </a>
+          <a href="get-involved.html#partner" class="mobile-subnav-link">
+            <span class="mobile-subnav-bullet"></span>
+            <span data-i18n="nav.partner_item">Partner with Us</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Link -->
+      <a href="contact.html" class="mobile-nav-link-simple" data-i18n="nav.contact_us">Contact Us</a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <a href="get-involved.html#donate" class="btn btn-accent btn-lg" style="width: 100%; text-align: center;" data-i18n="nav.donate_now">DONATE NOW</a>
+      <a href="get-support.html" class="btn btn-outline btn-lg" style="width: 100%; text-align: center; margin-top: 0.5rem;" data-i18n="nav.get_family_support">GET FAMILY SUPPORT</a>
+      <div class="drawer-social-section">
+        <div class="drawer-social-title" data-i18n="nav.follow_amani">Follow AMANI KIDS</div>
+        <div class="drawer-social-links">
+          <a href="https://www.facebook.com/profile.php?id=100085364216384" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/amaniikids/" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/105801002/" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://x.com/amanikidssocial" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@AmanikidsCharlotte" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="mobile-drawer-contact">
+        <p class="notranslate" translate="no"><strong>AMANI KIDS</strong> • 501(c)(3) Nonprofit</p>
+        <p class="notranslate" translate="no">3400 Shamrock Dr., Suite D, Charlotte, NC</p>
+        <p><a href="tel:+17049129379" class="notranslate" translate="no">+1 (704) 912-9379</a></p>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    
+    <!-- 2. HERO SECTION (SQUARE, AUTHORITATIVE, HIGH-FIDELITY) -->
+    <section class="hero-section" aria-labelledby="hero-headline">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content fade-up">
+            <h1 id="hero-headline" class="hero-headline">
+              <span data-i18n="hero.title_part1">Empowering Children. Strengthening Families.</span>
+              <span class="serif-em" data-i18n="hero.title_em">Building Communities.</span>
+            </h1>
+            
+            <p class="hero-lead-text" data-i18n="hero.lead">
+              AMANI KIDS is an accredited 501(c)(3) nonprofit organization based in Charlotte, NC. We walk beside African refugee, immigrant, and newcomer families — bridging language access, school enrollment, and community resources with dignity, lived experience, and culturally rooted care.
+            </p>
+
+            <div class="hero-actions">
+              <a href="get-support.html" class="btn btn-accent btn-lg" data-i18n="hero.cta_support">
+                GET FAMILY SUPPORT
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="get-involved.html#donate" class="btn btn-outline btn-lg" data-i18n="hero.cta_donate">
+                SUPPORT AMANI KIDS
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media-wrapper fade-up">
+            <div class="hero-image-card">
+              <img src="images/amani_community_hero.jpg" 
+                   alt="Amani Kids community members, children, mentors, and staff gathered together in Charlotte NC" 
+                   width="1024" height="768" loading="eager">
+
+              <div class="hero-floating-badge">
+                <div class="badge-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div>
+                  <div class="badge-text-primary" data-i18n="hero.badge_lived">Rooted in Lived Experience</div>
+                  <div class="badge-text-secondary" data-i18n="hero.badge_desc">Founded by immigrants, serving with dignity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HERO CREDIBILITY STRIP -->
+    <section class="credibility-strip" aria-label="Verified Trust Elements">
+      <div class="container">
+        <div class="credibility-grid">
+          <div class="credibility-item">
+            <div class="credibility-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="credibility-text">
+              <strong data-i18n="trust.nonprofit">501(c)(3) Nonprofit</strong>
+              <span data-i18n="trust.nonprofit_sub">Tax-exempt charitable organization</span>
+            </div>
+          </div>
+
+          <div class="credibility-divider"></div>
+
+          <div class="credibility-item">
+            <div class="credibility-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="credibility-text">
+              <strong data-i18n="trust.charlotte">Charlotte, North Carolina</strong>
+              <span data-i18n="trust.charlotte_sub">3400 Shamrock Dr., Suite D</span>
+            </div>
+          </div>
+
+          <div class="credibility-divider"></div>
+
+          <div class="credibility-item">
+            <div class="credibility-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <div class="credibility-text">
+              <strong data-i18n="trust.diaspora">African Diaspora Focus</strong>
+              <span data-i18n="trust.diaspora_sub">Refugees, immigrants & newcomers</span>
+            </div>
+          </div>
+
+          <div class="credibility-divider"></div>
+
+          <div class="credibility-item">
+            <div class="credibility-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="credibility-text">
+              <strong data-i18n="trust.verified">Community Verified</strong>
+              <span data-i18n="trust.verified_sub">Deep local roots & school alliances</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHY WE EXIST (RESETTLEMENT REALITY) -->
+    <section id="why-we-exist" class="section-padding" aria-labelledby="challenge-title">
+      <div class="container">
+        <div class="challenge-grid">
+          
+          <div class="challenge-media fade-up">
+            <img src="images/amani_classroom_banner.jpg" 
+                 alt="Amani Kids community — youth, children, and mentors holding the green Amani Kids banner in Charlotte, NC" 
+                 width="1024" height="768" loading="lazy">
+            <div class="challenge-quote-overlay">
+              <p class="challenge-quote-text" data-i18n="challenge.quote">"When a family arrives in a new country, everything is unfamiliar. Having someone who speaks your language and understands your journey changes everything."</p>
+            </div>
+          </div>
+
+          <div class="challenge-content fade-up">
+            <div class="eyebrow" data-i18n="challenge.eyebrow">THE REALITY OF RESETTLEMENT</div>
+            <h2 id="challenge-title" class="section-title" data-i18n="challenge.title">
+              Starting over should not mean starting alone.
+            </h2>
+            <p class="lead-text" data-i18n="challenge.lead">
+              For African refugee, immigrant, and newcomer families arriving in the United States, resettlement brings both immense opportunity and profound hurdles. Without a trusted guide, families can face prolonged isolation.
+            </p>
+
+            <div class="challenge-cards">
+              <div class="challenge-card">
+                <div class="challenge-card-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <h4 data-i18n="challenge.card1_title">Language Barriers</h4>
+                <p data-i18n="challenge.card1_desc">Navigating school registration, healthcare, and essential services without native-language support.</p>
+              </div>
+
+              <div class="challenge-card">
+                <div class="challenge-card-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+                </div>
+                <h4 data-i18n="challenge.card2_title">Unfamiliar Systems</h4>
+                <p data-i18n="challenge.card2_desc">Deciphering complex American institutional processes that rarely come with clear roadmaps.</p>
+              </div>
+
+              <div class="challenge-card">
+                <div class="challenge-card-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" y1="8" x2="19" y2="14"></line><line x1="22" y1="11" x2="16" y2="11"></line></svg>
+                </div>
+                <h4 data-i18n="challenge.card3_title">Social Isolation</h4>
+                <p data-i18n="challenge.card3_desc">Leaving behind extended family, village networks, and familiar cultural safety nets.</p>
+              </div>
+
+              <div class="challenge-card">
+                <div class="challenge-card-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                </div>
+                <h4 data-i18n="challenge.card4_title">Cultural Transition</h4>
+                <p data-i18n="challenge.card4_desc">Preserving deep African heritage and dignity while children adapt to American classroom environments.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. OUR MISSION & OUR VISION (DUAL ARCHITECTURAL CARDS) -->
+    <section id="mission-vision" class="section-padding bg-warm-alt" aria-labelledby="mission-vision-title">
+      <div class="container">
+        <div class="section-header text-center fade-up">
+          <div class="eyebrow eyebrow-pill" data-i18n="mission.eyebrow">OUR FOUNDATIONAL COMPASS</div>
+          <h2 id="mission-vision-title" class="section-title" data-i18n="mission.title">
+            Guided by Purpose. Driven by Community.
+          </h2>
+        </div>
+
+        <div class="mission-vision-grid fade-up">
+          <!-- Mission Card -->
+          <article class="mission-card">
+            <div class="eyebrow" style="color: var(--color-accent); margin-bottom: 0.5rem;" data-i18n="mission.pillar">PILLAR 01 • PURPOSE</div>
+            <h3 style="font-size: clamp(1.75rem, 2.5vw, 2.25rem); color: var(--color-primary); margin-bottom: 1.25rem; letter-spacing: -0.02em;" data-i18n="mission.card_title">Our Mission</h3>
+            <p data-i18n="mission.card_desc">
+              To empower African refugee, immigrant, and newcomer youth and families through education, language access, after-school enrichment, and holistic guidance — fostering self-reliance and lifelong belonging.
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-accent); font-weight: 700;">
+              <span>01 • PURPOSE & EMPOWERMENT</span>
+            </div>
+          </article>
+
+          <!-- Vision Card -->
+          <article class="vision-card">
+            <div class="eyebrow" style="color: var(--color-gold); margin-bottom: 0.5rem;" data-i18n="vision.pillar">PILLAR 02 • COMMUNITY</div>
+            <h3 style="font-size: clamp(1.75rem, 2.5vw, 2.25rem); color: #FFFFFF; margin-bottom: 1.25rem; letter-spacing: -0.02em;" data-i18n="vision.card_title">Our Vision</h3>
+            <p data-i18n="vision.card_desc">
+              A Charlotte community where every African diaspora family is welcomed with dignity, equipped to navigate essential systems, and empowered to reach their fullest potential.
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-gold); font-weight: 700;">
+              <span>02 • COMMUNITY & BELONGING</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. QUICK-FIRE QUESTIONS ACCORDION (Q&A / FAQ) -->
+    <section id="faq" class="faq-section bg-warm-alt" aria-labelledby="faq-title">
+      <div class="container faq-container">
+        <div class="section-header text-center fade-up">
+          <div class="eyebrow eyebrow-pill" data-i18n="faq.eyebrow">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 id="faq-title" class="section-title" data-i18n="faq.title">
+            Quick-fire answers about our work.
+          </h2>
+          <p class="lead-text" style="max-width: 680px; margin: 0 auto;" data-i18n="faq.lead">
+            Everything you need to know about our services, languages, tax-deductible donations, and community volunteer pathways.
+          </p>
+        </div>
+
+        <div class="faq-accordion fade-up">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-ans-1">
+              <span data-i18n="faq.q1">How does Amani Kids support newly arrived refugee and immigrant families?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div id="faq-ans-1" class="faq-answer" style="max-height: 350px;">
+              <div class="faq-answer-inner" data-i18n="faq.a1">
+                We provide comprehensive, culturally grounded navigation: bilingual school enrollment with Charlotte-Mecklenburg Schools, orientation to healthcare and social services, daily after-school homework tutoring, and community inclusion events like Bisakana Day. Every family is greeted by team members who speak their mother tongue and understand the resettlement process from personal experience.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-2">
+              <span data-i18n="faq.q2">Are Amani Kids services completely free of charge for families?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div id="faq-ans-2" class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq.a2">
+                Yes, 100% free. No newcomer family ever pays for school enrollment advocacy, after-school literacy tutoring, cultural events, or family case navigation. Amani Kids is an independent 501(c)(3) public charity funded through compassionate individual donors, philanthropic grants, and community partners.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-3">
+              <span data-i18n="faq.q3">What languages does your bilingual team speak?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div id="faq-ans-3" class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq.a3">
+                Our team natively speaks Swahili, Lingala, French, English, and Kinyarwanda. We ensure that parents can ask sensitive questions and understand legal or educational documents in the language they feel most confident and respected in.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-4">
+              <span data-i18n="faq.q4">Is my financial donation tax-deductible?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div id="faq-ans-4" class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq.a4">
+                Yes. Amani Kids Inc. is a registered 501(c)(3) non-profit organization recognized by the IRS. Contributions are tax-deductible to the fullest extent permitted by law. You receive an official tax receipt immediately following your donation for your tax records.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-5">
+              <span data-i18n="faq.q5">How can I get involved as a volunteer or mentor in Charlotte?</span>
+              <span class="faq-toggle-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div id="faq-ans-5" class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq.a5">
+                We actively welcome compassionate volunteers to mentor youth, assist with after-school reading circles, interpret, coordinate event logistics for Bisakana Day, or provide professional expertise. You can fill out our volunteer intake form or email us at info@amanikidsnc.org.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. HIGH-IMPACT DUAL CONVERSION BANNER -->
+    <section id="start" class="conversion-banner-section" aria-labelledby="conversion-title">
+      <div class="container">
+        <div class="conversion-banner-card fade-up">
+          <div class="conversion-banner-content">
+            <span class="conversion-banner-tag" data-i18n="conversion.tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              GET IN TOUCH • WE ARE HERE FOR YOU
+            </span>
+            <h2 id="conversion-title" class="conversion-banner-title" data-i18n="conversion.title">
+              Ready to connect or make a lasting difference?
+            </h2>
+            <p class="conversion-banner-lead" data-i18n="conversion.lead">
+              Whether your family needs immediate bilingual guidance in Charlotte or you want to invest in educational equity for newcomer children, your next step starts here.
+            </p>
+            <div class="conversion-buttons">
+              <a href="get-support.html" class="btn btn-accent btn-lg" data-i18n="cta.btn_support">
+                REQUEST FAMILY SUPPORT
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="get-involved.html#donate" class="btn btn-outline-white btn-lg" data-i18n="doors.door1_cta">
+                DONATE TO AMANI KIDS
+              </a>
+            </div>
+            <div class="conversion-assurances">
+              <div class="assurance-item">
+                <span class="assurance-dot" aria-hidden="true"></span>
+                <span data-i18n="conversion.assurance1">501(c)(3) Registered Public Charity</span>
+              </div>
+              <div class="assurance-item">
+                <span class="assurance-dot" aria-hidden="true"></span>
+                <span data-i18n="conversion.assurance2">100% Free Family Services</span>
+              </div>
+              <div class="assurance-item">
+                <span class="assurance-dot" aria-hidden="true"></span>
+                <span data-i18n="conversion.assurance3">Bilingual & Culturally Grounded</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 8. INSTITUTIONAL FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-card notranslate" translate="no" aria-label="AMANI KIDS Home">
+            <img src="images/amani_logo.png" alt="AMANI KIDS - Peace Love and Joy" class="site-logo-img">
+          </a>
+          <p>
+            Connecting African refugee, immigrant, and newcomer families with trusted resources, cultural belonging, and educational support to help them thrive in a new home.
+          </p>
+          <div class="footer-status notranslate" translate="no">
+            <span class="pulse-dot"></span>
+            System Operational • 501(c)(3) Nonprofit
+          </div>
+        
+          <!-- Official Social Media Channels -->
+          <div class="footer-social-strip">
+            <h5 class="footer-social-heading">Follow Our Journey</h5>
+            <div class="social-links" aria-label="Official Social Media Links">
+              <a href="https://www.facebook.com/profile.php?id=100085364216384" target="_blank" rel="noopener noreferrer" class="social-link-btn facebook" aria-label="Facebook (Amani Kids)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/amaniikids/" target="_blank" rel="noopener noreferrer" class="social-link-btn instagram" aria-label="Instagram (@amaniikids)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/105801002/" target="_blank" rel="noopener noreferrer" class="social-link-btn linkedin" aria-label="LinkedIn (Amani Kids)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://x.com/amanikidssocial" target="_blank" rel="noopener noreferrer" class="social-link-btn x-twitter" aria-label="X Twitter (@amanikidssocial)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@AmanikidsCharlotte" target="_blank" rel="noopener noreferrer" class="social-link-btn youtube" aria-label="YouTube (@AmanikidsCharlotte)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.org">Organization</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="team.html" data-i18n="nav.team">Meet Our Team</a></li>
+            <li><a href="programs.html" data-i18n="nav.programs">Our Programs</a></li>
+            <li><a href="impact.html" data-i18n="nav.impact">Verified Impact</a></li>
+            <li><a href="stories.html" data-i18n="nav.stories">Family Stories</a></li>
+            <li><a href="album.html" data-i18n="nav.album">Community Album</a></li>
+            <li><a href="events.html" data-i18n="nav.events">Events & Festivals</a></li>
+            <li><a href="blog.html" data-i18n="nav.blog">Journal & Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Action Pathways -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.action">Get Involved</h4>
+          <ul class="footer-nav-list">
+            <li><a href="get-involved.html#donate">Donate Financially</a></li>
+            <li><a href="get-involved.html#volunteer">Volunteer As Mentor</a></li>
+            <li><a href="get-involved.html#partner">Organizational Partnerships</a></li>
+            <li><a href="get-support.html">Request Family Support</a></li>
+            <li><a href="events.html#bisakana">Bisakana Day Festival</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Coordinates -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.contact">Headquarters</h4>
+          <div class="footer-contact-info notranslate" translate="no">
+            <p>
+              <strong>Amani Kids Inc.</strong><br>
+              3400 Shamrock Dr., Suite D<br>
+              Charlotte, NC 28215
+            </p>
+            <p>
+              <strong>Direct Phone:</strong><br>
+              <a href="tel:+17049129379">+1 (704) 912-9379</a>
+            </p>
+            <p>
+              <strong>Email:</strong><br>
+              <a href="mailto:info@amanikidsnc.org">info@amanikidsnc.org</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal & Copyright -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span class="current-year">2026</span> AMANI KIDS INC. All rights reserved. Registered 501(c)(3) public charity.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="get-support.html">Privacy & Family Dignity</a>
+          <a href="get-involved.html">Financial Transparency</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/i18n.js"></script>
+
+  <!-- ULTRA-PREMIUM MOBILE BOTTOM APP BAR (Dock façon App Native) -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="mobile-bottom-tab" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span data-i18n="nav.bottom_home">Home</span>
+    </a>
+    <a href="programs.html" class="mobile-bottom-tab" aria-label="Programs">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span data-i18n="nav.bottom_programs">Programs</span>
+    </a>
+    <a href="album.html" class="mobile-bottom-tab" aria-label="Album">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span data-i18n="nav.bottom_album">Album</span>
+    </a>
+    <a href="impact.html" class="mobile-bottom-tab" aria-label="Impact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <span data-i18n="nav.bottom_impact">Impact</span>
+    </a>
+    <a href="get-involved.html#donate" class="mobile-bottom-tab tab-donate" aria-label="Donate">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span data-i18n="nav.bottom_donate">Donate</span>
+    </a>
+  </nav>
+
+</body>
+</html>
