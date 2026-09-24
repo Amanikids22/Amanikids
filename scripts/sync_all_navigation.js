@@ -1,36 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <base href="/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1E3A2F">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
-  <title>Family Stories — AMANI KIDS | Authentic Voices of the Diaspora</title>
-  <meta name="description" content="Read authentic reflections and inspiring journeys of African refugee, immigrant, and newcomer families supported by Amani Kids in Charlotte, NC.">
-  <meta name="keywords" content="Amani Kids stories, Shukuru Rugoboza, African newcomer testimonies, Charlotte refugee stories, Bisakana Day memories">
+const fs = require('fs');
+const path = require('path');
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-</head>
-<body>
+const ROOT_DIR = path.resolve(__dirname, '..');
 
-  <svg class="noise-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-    <filter id="noiseFilter">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
-    </filter>
-    <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
-  </svg>
+const ALL_PAGES = [
+  'index.html',
+  'about.html',
+  'team.html',
+  'programs.html',
+  'events.html',
+  'impact.html',
+  'stories.html',
+  'album.html',
+  'blog.html',
+  'get-support.html',
+  'contact.html',
+  'get-involved.html',
+  'donate.html',
+  'volunteer.html',
+  'partnerships.html'
+];
 
-            <!-- 1. FLOATING NAVIGATION ISLAND (ELITE EDITORIAL ARCHITECTURE) -->
+function generateHeader(activeFile) {
+  const isAboutActive = ['about.html', 'team.html', 'impact.html'].includes(activeFile);
+  const isProgramsActive = activeFile === 'programs.html';
+  const isCommunityActive = ['stories.html', 'events.html', 'album.html', 'blog.html'].includes(activeFile);
+  const isGetInvolvedActive = ['donate.html', 'volunteer.html', 'partnerships.html', 'get-involved.html'].includes(activeFile);
+  const isContactActive = activeFile === 'contact.html';
+  const isSupportActive = activeFile === 'get-support.html';
+
+  return `  <!-- 1. FLOATING NAVIGATION ISLAND (ELITE EDITORIAL ARCHITECTURE) -->
   <header class="site-header" role="banner">
     <div class="nav-island">
       <a href="index.html" class="brand-logo notranslate" translate="no" aria-label="AMANI KIDS Home">
@@ -40,22 +39,22 @@
       <nav class="nav-links" role="navigation" aria-label="Main Navigation">
         <!-- 1. About Dropdown -->
         <div class="nav-item-dropdown">
-          <button type="button" class="nav-link-dropdown" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="nav-link-dropdown${isAboutActive ? ' active' : ''}" aria-expanded="false" aria-haspopup="true">
             <span data-i18n="nav.about">About</span>
             <span class="nav-chevron" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </button>
           <div class="nav-dropdown-menu" role="menu">
-            <a href="about.html" class="nav-dropdown-item" role="menuitem">
+            <a href="about.html" class="nav-dropdown-item${activeFile === 'about.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.about_amani">About AMANI</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_about">Mission, history & Charlotte roots</span>
             </a>
-            <a href="team.html" class="nav-dropdown-item" role="menuitem">
+            <a href="team.html" class="nav-dropdown-item${activeFile === 'team.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.team">Meet Our Team</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_team">12 leadership & community advocates</span>
             </a>
-            <a href="impact.html" class="nav-dropdown-item" role="menuitem">
+            <a href="impact.html" class="nav-dropdown-item${activeFile === 'impact.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.verified_impact">Verified Impact</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_impact">Accountability, metrics & outcomes</span>
             </a>
@@ -64,14 +63,14 @@
 
         <!-- 2. Programs Dropdown -->
         <div class="nav-item-dropdown">
-          <button type="button" class="nav-link-dropdown" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="nav-link-dropdown${isProgramsActive ? ' active' : ''}" aria-expanded="false" aria-haspopup="true">
             <span data-i18n="nav.programs">Programs</span>
             <span class="nav-chevron" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </button>
           <div class="nav-dropdown-menu" role="menu">
-            <a href="programs.html" class="nav-dropdown-item" role="menuitem">
+            <a href="programs.html" class="nav-dropdown-item${activeFile === 'programs.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.all_programs">All Programs</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_all_programs">Education & family navigation</span>
             </a>
@@ -92,26 +91,26 @@
 
         <!-- 3. Community Dropdown -->
         <div class="nav-item-dropdown">
-          <button type="button" class="nav-link-dropdown active" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="nav-link-dropdown${isCommunityActive ? ' active' : ''}" aria-expanded="false" aria-haspopup="true">
             <span data-i18n="nav.community">Community</span>
             <span class="nav-chevron" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </button>
           <div class="nav-dropdown-menu" role="menu">
-            <a href="stories.html" class="nav-dropdown-item active" role="menuitem">
+            <a href="stories.html" class="nav-dropdown-item${activeFile === 'stories.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.family_stories">Family Stories</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_stories">Firsthand resettlement journeys</span>
             </a>
-            <a href="events.html" class="nav-dropdown-item" role="menuitem">
+            <a href="events.html" class="nav-dropdown-item${activeFile === 'events.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.events_bisakana">Events & Festivals</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_events">Bisakana Day & celebrations</span>
             </a>
-            <a href="album.html" class="nav-dropdown-item" role="menuitem">
+            <a href="album.html" class="nav-dropdown-item${activeFile === 'album.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.photo_album">Community Album</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_album">Moments of connection, pride & joy</span>
             </a>
-            <a href="blog.html" class="nav-dropdown-item" role="menuitem">
+            <a href="blog.html" class="nav-dropdown-item${activeFile === 'blog.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.journal_blog">Journal & Blog</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_blog">News, updates & family guides</span>
             </a>
@@ -120,22 +119,22 @@
 
         <!-- 4. Get Involved Dropdown (3 Independent Pathways) -->
         <div class="nav-item-dropdown">
-          <button type="button" class="nav-link-dropdown" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="nav-link-dropdown${isGetInvolvedActive ? ' active' : ''}" aria-expanded="false" aria-haspopup="true">
             <span data-i18n="nav.get_involved">Get Involved</span>
             <span class="nav-chevron" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </button>
           <div class="nav-dropdown-menu" role="menu">
-            <a href="donate.html" class="nav-dropdown-item" role="menuitem">
+            <a href="donate.html" class="nav-dropdown-item${['donate.html', 'get-involved.html'].includes(activeFile) ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.donate_item">Donate Financially</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_donate">100% tax-deductible contribution</span>
             </a>
-            <a href="volunteer.html" class="nav-dropdown-item" role="menuitem">
+            <a href="volunteer.html" class="nav-dropdown-item${activeFile === 'volunteer.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.volunteer_item">Volunteer as Mentor</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_volunteer">Tutor youth & guide families</span>
             </a>
-            <a href="partnerships.html" class="nav-dropdown-item" role="menuitem">
+            <a href="partnerships.html" class="nav-dropdown-item${activeFile === 'partnerships.html' ? ' active' : ''}" role="menuitem">
               <span class="nav-dropdown-title" data-i18n="nav.partner_item">Institutional Partnerships</span>
               <span class="nav-dropdown-desc" data-i18n="nav.desc_partner">Schools & organizational alliances</span>
             </a>
@@ -143,7 +142,7 @@
         </div>
 
         <!-- 5. Contact (Direct Link) -->
-        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="contact.html" class="nav-link${isContactActive ? ' active' : ''}" data-i18n="nav.contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
@@ -155,7 +154,7 @@
         </div>
 
         <!-- Quiet Luxury Get Support Link -->
-        <a href="get-support.html" class="nav-support-link" data-i18n="nav.get_support">Get Support</a>
+        <a href="get-support.html" class="nav-support-link${isSupportActive ? ' active' : ''}" data-i18n="nav.get_support">Get Support</a>
 
         <!-- Elite Sculptural Donate CTA -->
         <a href="donate.html" class="btn-elite-donate">
@@ -173,10 +172,11 @@
         </button>
       </div>
     </div>
-  </header>
+  </header>`;
+}
 
-  <!-- Mobile Drawer Backdrop & Drawer -->
-        <!-- MOBILE NAVIGATION DRAWER (Accordion Architecture) -->
+function generateDrawer(activeFile) {
+  return `  <!-- MOBILE NAVIGATION DRAWER (Accordion Architecture) -->
   <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
   <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu" aria-hidden="true">
     <div class="mobile-drawer-header">
@@ -203,7 +203,7 @@
 
     <nav class="mobile-nav-links" role="navigation" aria-label="Mobile Navigation">
       <!-- Home Link -->
-      <a href="index.html" class="mobile-nav-link-simple" data-i18n="nav.home">Home</a>
+      <a href="index.html" class="mobile-nav-link-simple${activeFile === 'index.html' ? ' active' : ''}" data-i18n="nav.home">Home</a>
 
       <!-- About Us Accordion -->
       <div class="mobile-nav-group">
@@ -214,15 +214,15 @@
           </span>
         </button>
         <div class="mobile-accordion-body">
-          <a href="about.html" class="mobile-subnav-link">
+          <a href="about.html" class="mobile-subnav-link${activeFile === 'about.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.about_amani">About AMANI</span>
           </a>
-          <a href="team.html" class="mobile-subnav-link">
+          <a href="team.html" class="mobile-subnav-link${activeFile === 'team.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.team">Meet Our Team</span>
           </a>
-          <a href="impact.html" class="mobile-subnav-link">
+          <a href="impact.html" class="mobile-subnav-link${activeFile === 'impact.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.verified_impact">Verified Impact</span>
           </a>
@@ -238,7 +238,7 @@
           </span>
         </button>
         <div class="mobile-accordion-body">
-          <a href="programs.html" class="mobile-subnav-link">
+          <a href="programs.html" class="mobile-subnav-link${activeFile === 'programs.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.all_programs">All Programs</span>
           </a>
@@ -258,7 +258,7 @@
       </div>
 
       <!-- Standalone Direct Album Link -->
-      <a href="album.html" class="mobile-nav-link-simple" data-i18n="nav.album">Album</a>
+      <a href="album.html" class="mobile-nav-link-simple${activeFile === 'album.html' ? ' active' : ''}" data-i18n="nav.album">Album</a>
 
       <!-- Community Accordion -->
       <div class="mobile-nav-group">
@@ -269,19 +269,19 @@
           </span>
         </button>
         <div class="mobile-accordion-body">
-          <a href="stories.html" class="mobile-subnav-link active">
+          <a href="stories.html" class="mobile-subnav-link${activeFile === 'stories.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.family_stories">Family Stories</span>
           </a>
-          <a href="events.html" class="mobile-subnav-link">
+          <a href="events.html" class="mobile-subnav-link${activeFile === 'events.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.events_bisakana">Events & Festivals</span>
           </a>
-          <a href="album.html" class="mobile-subnav-link">
+          <a href="album.html" class="mobile-subnav-link${activeFile === 'album.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.photo_album">Community Album</span>
           </a>
-          <a href="blog.html" class="mobile-subnav-link">
+          <a href="blog.html" class="mobile-subnav-link${activeFile === 'blog.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.journal_blog">Journal & Blog</span>
           </a>
@@ -297,15 +297,15 @@
           </span>
         </button>
         <div class="mobile-accordion-body">
-          <a href="donate.html" class="mobile-subnav-link">
+          <a href="donate.html" class="mobile-subnav-link${['donate.html', 'get-involved.html'].includes(activeFile) ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.donate_item">Donate Financially</span>
           </a>
-          <a href="volunteer.html" class="mobile-subnav-link">
+          <a href="volunteer.html" class="mobile-subnav-link${activeFile === 'volunteer.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.volunteer_item">Volunteer as Mentor</span>
           </a>
-          <a href="partnerships.html" class="mobile-subnav-link">
+          <a href="partnerships.html" class="mobile-subnav-link${activeFile === 'partnerships.html' ? ' active' : ''}">
             <span class="mobile-subnav-bullet"></span>
             <span data-i18n="nav.partner_item">Institutional Partnerships</span>
           </a>
@@ -313,7 +313,7 @@
       </div>
 
       <!-- Contact Link -->
-      <a href="contact.html" class="mobile-nav-link-simple" data-i18n="nav.contact_us">Contact Us</a>
+      <a href="contact.html" class="mobile-nav-link-simple${activeFile === 'contact.html' ? ' active' : ''}" data-i18n="nav.contact_us">Contact Us</a>
     </nav>
 
     <div class="mobile-drawer-footer">
@@ -345,233 +345,11 @@
         <p><a href="tel:+17049129379" class="notranslate" translate="no">+1 (704) 912-9379</a></p>
       </div>
     </div>
-  </aside>
+  </aside>`;
+}
 
-  <main id="main-content">
-    
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-      <div class="container page-hero-content fade-up">
-        <div class="eyebrow eyebrow-pill">EDITORIAL ESSAYS & TESTIMONIALS</div>
-        <h1 class="page-hero-title">
-          Behind Every Connection <span class="serif-italic text-accent">is a Human Story.</span>
-        </h1>
-        <p class="lead-text" style="margin: 0 auto;">
-          Resettlement is not a single date on a calendar; it is an ongoing journey of resilience, mutual aid, and quiet victories. These are the lived experiences of our Charlotte community.
-        </p>
-      </div>
-    </section>
-
-    <!-- FEATURED STORY: SHUKURU RUGOBOZA -->
-    <section class="section-padding">
-      <div class="container">
-        <article class="story-spotlight fade-up" aria-labelledby="shukuru-story-title">
-          <div class="story-spotlight-grid">
-            
-            <div class="story-spotlight-media">
-              <img src="images/silhouette_family.svg" 
-                   alt="Shukuru Rugoboza family story — photo forthcoming" loading="lazy">
-              <span class="story-quote-tag">FEATURED ESSAY</span>
-            </div>
-
-            <div class="story-spotlight-body">
-              <div class="eyebrow">EDUCATION & ADAPTATION</div>
-              <h2 id="shukuru-story-title" class="story-title">
-                "A Game-Changer for Our Family": Navigating the New World of School
-              </h2>
-              <p class="story-quote-text">
-                "When we arrived in North Carolina, the simplest task felt like climbing a mountain. Enrolling our children in school, understanding report cards, knowing where they could find friends who wouldn't judge their accent..."
-              </p>
-              <p class="story-lead-body">
-                "Amani Kids stepped in not as an office full of forms, but like family. They connected our children directly with an after-school program at Ourbridge for Kids that provided intensive English literacy and social companionship. Within six months, my children weren't just attending school — they were excited to raise their hands. Having someone walk beside you changes everything."
-              </p>
-              
-              <div class="story-author">
-                <div class="story-author-info">
-                  <strong>Shukuru Rugoboza</strong>
-                  <span>Parent & Community Voice • Charlotte, NC</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- COMMUNITY PERSPECTIVES GRID -->
-    <section class="section-padding bg-warm-alt">
-      <div class="container">
-        <div class="section-header fade-up">
-          <div class="eyebrow">CHRONICLES OF BELONGING</div>
-          <h2 class="section-title">Voices from Our Community</h2>
-          <p class="lead-text">Portraits of resilience, youth leadership, and volunteer dedication across Charlotte.</p>
-        </div>
-
-        <div class="stories-grid fade-up">
-          
-          <!-- Story 1 -->
-          <article class="story-card">
-            <div class="story-card-media">
-              <img src="images/silhouette_learning.svg" 
-                   alt="Finding My Sauti in a New Classroom — photo forthcoming" loading="lazy">
-            </div>
-            <div class="story-card-body">
-              <div class="story-card-tag text-accent">YOUTH PERSPECTIVE</div>
-              <h3 class="story-card-title">Finding My Sauti in a New Classroom</h3>
-              <p class="story-card-text">
-                "In my first month in 7th grade, I kept my head down because I was scared my English was clumsy. At Sauti Safe Space, we did creative writing and poetry in Swahili and English. I realized my story mattered. Now I'm on the school debate team."
-              </p>
-              <div class="story-card-footer">
-                <strong class="story-card-author-name">Grace N. (Age 14)</strong>
-                <span class="story-card-author-role">Sauti Safe Space Participant</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Story 2 -->
-          <article class="story-card">
-            <div class="story-card-media">
-              <img src="images/amani_bisakana_day.jpg" 
-                   alt="Community gathering at Bisakana festival in Charlotte NC" loading="lazy">
-            </div>
-            <div class="story-card-body">
-              <div class="story-card-tag text-gold">PARENT REFLECTION</div>
-              <h3 class="story-card-title">The Day Charlotte Finally Felt Like Home</h3>
-              <p class="story-card-text">
-                "For four months after resettlement, my husband and I felt invisible. Then we went to Bisakana Day. Hearing Congolese rumba, tasting familiar spices, and watching my children play soccer with dozens of other diaspora kids healed my heart."
-              </p>
-              <div class="story-card-footer">
-                <strong class="story-card-author-name">Marie-Claire M.</strong>
-                <span class="story-card-author-role">Mother of three • Charlotte, NC</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Story 3 -->
-          <article class="story-card">
-            <div class="story-card-media">
-              <img src="images/silhouette_placeholder.svg" 
-                   alt="Mentorship Is a Two-Way Bridge — photo forthcoming" loading="lazy">
-            </div>
-            <div class="story-card-body">
-              <div class="story-card-tag text-primary">VOLUNTEER INSIGHT</div>
-              <h3 class="story-card-title">Mentorship Is a Two-Way Bridge</h3>
-              <p class="story-card-text">
-                "I volunteered thinking I was simply going to teach reading skills. Instead, the kids taught me about endurance, joy, and the beauty of Central African storytelling. Amani Kids is transforming Charlotte into a kinder, richer city."
-              </p>
-              <div class="story-card-footer">
-                <strong class="story-card-author-name">David K.</strong>
-                <span class="story-card-author-role">Volunteer Literacy Mentor</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- INVITATION TO SHARE YOUR STORY -->
-    <section class="section-padding">
-      <div class="container container-narrow text-center fade-up">
-        <div class="eyebrow">SHARE YOUR JOURNEY</div>
-        <h2 class="section-title">Are you a family supported by Amani Kids?</h2>
-        <p class="lead-text" style="margin: 0 auto 2.5rem;">
-          Your voice inspires newcomers arriving this week. If you would like to share your reflection, connect with our storytelling team.
-        </p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Connect With Us</a>
-      </div>
-    </section>
-
-  </main>
-
-    <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-compact-grid">
-        
-        <!-- Brand & Mission & Socials -->
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo-card notranslate" translate="no" aria-label="AMANI KIDS Home">
-            <img src="images/amani_logo.png" alt="AMANI KIDS - Peace Love and Joy" class="site-logo-img">
-          </a>
-          <p>
-            Connecting African refugee, immigrant, and newcomer families with trusted resources, cultural belonging, and educational support to help them thrive in Charlotte, NC.
-          </p>
-          <div class="footer-status notranslate" translate="no">
-            <span class="pulse-dot"></span>
-            System Operational • 501(c)(3) Nonprofit
-          </div>
-        
-          <!-- Official Social Media Channels -->
-          <div class="footer-social-strip">
-            <h5 class="footer-social-heading">Follow Our Journey</h5>
-            <div class="social-links" aria-label="Official Social Media Links">
-              <a href="https://www.facebook.com/profile.php?id=100085364216384" target="_blank" rel="noopener noreferrer" class="social-link-btn facebook" aria-label="Facebook (Amani Kids)">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/amaniikids/" target="_blank" rel="noopener noreferrer" class="social-link-btn instagram" aria-label="Instagram (@amaniikids)">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/company/105801002/" target="_blank" rel="noopener noreferrer" class="social-link-btn linkedin" aria-label="LinkedIn (Amani Kids)">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              </a>
-              <a href="https://x.com/amanikidssocial" target="_blank" rel="noopener noreferrer" class="social-link-btn x-twitter" aria-label="X Twitter (@amanikidssocial)">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-              <a href="https://www.youtube.com/@AmanikidsCharlotte" target="_blank" rel="noopener noreferrer" class="social-link-btn youtube" aria-label="YouTube (@AmanikidsCharlotte)">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Official Coordinates Card -->
-        <div class="footer-contact-card notranslate" translate="no">
-          <div class="footer-contact-card-title">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Headquarters & Contacts</span>
-          </div>
-          
-          <div class="footer-contact-items">
-            <!-- Address -->
-            <div class="footer-contact-item">
-              <span class="footer-contact-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              </span>
-              <div>
-                <span class="footer-contact-label">Our Address</span>
-                <span class="footer-contact-val">3400 Shamrock Dr., Suite D, Charlotte, NC 28215</span>
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="footer-contact-item">
-              <span class="footer-contact-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </span>
-              <div>
-                <span class="footer-contact-label">Direct Phone</span>
-                <a href="tel:+17049129379" class="footer-contact-val">+1 (704) 912-9379</a>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="footer-contact-item">
-              <span class="footer-contact-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </span>
-              <div>
-                <span class="footer-contact-label">Official Email</span>
-                <a href="mailto:info@amanikidsnc.org" class="footer-contact-val">info@amanikidsnc.org</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-            <!-- Legal & Copyright -->
+function generateFooterBottom() {
+  return `      <!-- Legal & Copyright -->
       <div class="footer-bottom">
         <div>
           &copy; <span class="current-year">2026</span> AMANI KIDS INC. All rights reserved. 501(c)(3) Nonprofit.
@@ -583,38 +361,92 @@
           <a href="partnerships.html">Partnerships</a>
           <a href="contact.html">Contact Us</a>
         </div>
-      </div>
-    </div>
-  </footer>
+      </div>`;
+}
 
-  <script src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/i18n.js"></script>
+function generateBottomBar(activeFile) {
+  const isDonate = ['donate.html', 'get-involved.html'].includes(activeFile);
+  const isHome = activeFile === 'index.html';
+  const isProg = activeFile === 'programs.html';
+  const isAlbum = activeFile === 'album.html';
+  const isImpact = activeFile === 'impact.html';
 
-    <!-- ULTRA-PREMIUM MOBILE BOTTOM APP BAR (Dock façon App Native) -->
+  return `  <!-- ULTRA-PREMIUM MOBILE BOTTOM APP BAR (Dock façon App Native) -->
   <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
-    <a href="index.html" class="mobile-bottom-tab" aria-label="Home">
+    <a href="index.html" class="mobile-bottom-tab${isHome ? ' active' : ''}" aria-label="Home">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       <span data-i18n="nav.bottom_home">Home</span>
     </a>
-    <a href="programs.html" class="mobile-bottom-tab" aria-label="Programs">
+    <a href="programs.html" class="mobile-bottom-tab${isProg ? ' active' : ''}" aria-label="Programs">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
       <span data-i18n="nav.bottom_programs">Programs</span>
     </a>
-    <a href="album.html" class="mobile-bottom-tab" aria-label="Album">
+    <a href="album.html" class="mobile-bottom-tab${isAlbum ? ' active' : ''}" aria-label="Album">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span data-i18n="nav.bottom_album">Album</span>
     </a>
-    <a href="impact.html" class="mobile-bottom-tab" aria-label="Impact">
+    <a href="impact.html" class="mobile-bottom-tab${isImpact ? ' active' : ''}" aria-label="Impact">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
       <span data-i18n="nav.bottom_impact">Impact</span>
     </a>
-    <a href="donate.html" class="mobile-bottom-tab tab-donate" aria-label="Donate">
+    <a href="donate.html" class="mobile-bottom-tab tab-donate${isDonate ? ' active' : ''}" aria-label="Donate">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
       <span data-i18n="nav.bottom_donate">Donate</span>
     </a>
-  </nav>
+  </nav>`;
+}
 
-</body>
-</html>
+const headerRegex = /<!--\s*1\.\s*(?:FLOATING\s+)?NAVIGATION\s+(?:ISLAND|BAR)[\s\S]*?-->\s*<header class="site-header"[\s\S]*?<\/header>/i;
+const fallbackHeaderRegex = /<header class="site-header"[\s\S]*?<\/header>/i;
+
+const drawerRegex = /(?:<!--\s*MOBILE NAVIGATION DRAWER[\s\S]*?-->\s*)*<div class="mobile-drawer-backdrop"[\s\S]*?<\/aside>/i;
+const fallbackDrawerRegex = /<aside[^>]*class="mobile-drawer"[\s\S]*?<\/aside>/i;
+
+const footerBottomRegex = /<!-- Legal & Copyright -->\s*<div class="footer-bottom">[\s\S]*?<\/div>\s*<\/div>\s*<\/footer>/i;
+
+const bottomBarRegex = /<!--\s*ULTRA-PREMIUM MOBILE BOTTOM APP BAR[\s\S]*?-->\s*<nav class="mobile-bottom-bar"[\s\S]*?<\/nav>|<nav class="mobile-bottom-bar"[\s\S]*?<\/nav>/i;
+
+let processedCount = 0;
+
+ALL_PAGES.forEach(filename => {
+  const filePath = path.join(ROOT_DIR, filename);
+  if (!fs.existsSync(filePath)) {
+    console.warn(`File not found: ${filename}`);
+    return;
+  }
+
+  let html = fs.readFileSync(filePath, 'utf8');
+
+  // 1. Replace Header
+  const newHeader = generateHeader(filename);
+  if (headerRegex.test(html)) {
+    html = html.replace(headerRegex, newHeader);
+  } else if (fallbackHeaderRegex.test(html)) {
+    html = html.replace(fallbackHeaderRegex, newHeader);
+  }
+
+  // 2. Replace Drawer
+  const newDrawer = generateDrawer(filename);
+  if (drawerRegex.test(html)) {
+    html = html.replace(drawerRegex, newDrawer);
+  } else if (fallbackDrawerRegex.test(html)) {
+    html = html.replace(fallbackDrawerRegex, newDrawer);
+  }
+
+  // 3. Replace Bottom Bar
+  const newBottomBar = generateBottomBar(filename);
+  if (bottomBarRegex.test(html)) {
+    html = html.replace(bottomBarRegex, newBottomBar);
+  }
+
+  // 4. Replace Footer Bottom
+  if (footerBottomRegex.test(html)) {
+    html = html.replace(footerBottomRegex, `${generateFooterBottom()}\n    </div>\n  </footer>`);
+  }
+
+  fs.writeFileSync(filePath, html, 'utf8');
+  processedCount++;
+  console.log(`✓ Synchronized navigation in ${filename}`);
+});
+
+console.log(`Successfully updated all ${processedCount} HTML pages with 3 independent pathways!`);

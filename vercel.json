@@ -3,5 +3,11 @@
   "framework": null,
   "outputDirectory": ".",
   "buildCommand": "echo 'Static build ready'",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/donate", "destination": "/donate.html" },
+    { "source": "/volunteer", "destination": "/volunteer.html" },
+    { "source": "/partnerships", "destination": "/partnerships.html" },
+    { "source": "/get-involved", "destination": "/donate.html" }
+  ]
 }
