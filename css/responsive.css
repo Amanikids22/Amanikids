@@ -755,6 +755,28 @@ html, body {
     gap: 0.65rem;
     align-items: flex-start;
   }
+
+  /* Zelle Responsive Styles */
+  .zelle-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .zelle-steps-strip {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .zelle-detail-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .btn-copy-zelle {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Universal Anti-Overflow Fallback for Any Residual Inline Grids */

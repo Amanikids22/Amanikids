@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         partner: 'New Partnership Inquiry',
         event: 'New Event RSVP Confirmation',
         donate: 'Online Donation Pledge',
+        receipt: 'Zelle Donation Tax Receipt Request',
         newsletter: 'New Newsletter Subscription'
       };
 
@@ -189,7 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (alertContainer) {
           alertContainer.className = 'form-alert success';
-          if (formType === 'donate') {
+          if (formType === 'receipt') {
+            alertContainer.textContent = 'Thank you! Your Zelle donation notification has been sent to info@amanikidsnc.org. An official IRS 501(c)(3) tax receipt will be issued to your email.';
+          } else if (formType === 'donate') {
             alertContainer.textContent = 'Thank you deeply for your generous gift to AMANI KIDS! Your donation details have been delivered to info@amanikidsnc.org. An official IRS 501(c)(3) tax receipt will be sent to you.';
           } else if (formType === 'support') {
             alertContainer.textContent = 'Thank you for reaching out. Your request has been securely sent to info@amanikidsnc.org. An Amani Kids coordinator will contact you warmly within 24–48 hours.';
@@ -213,4 +216,40 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 4. 1-Click Copy Zelle Details Controller
+  document.querySelectorAll('.btn-copy-zelle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const textToCopy = btn.getAttribute('data-copy');
+      if (!textToCopy) return;
+
+      const triggerCopiedState = () => {
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>Copied!</span>`;
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+          btn.classList.remove('copied');
+        }, 2000);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(triggerCopiedState).catch(() => {
+          fallbackCopyText(textToCopy, triggerCopiedState);
+        });
+      } else {
+        fallbackCopyText(textToCopy, triggerCopiedState);
+      }
+    });
+  });
+
+  function fallbackCopyText(text, callback) {
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    if (callback) callback();
+  }
 });

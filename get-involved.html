@@ -370,93 +370,140 @@
           </p>
         </div>
 
-        <!-- Donation Card Form (Centered, Tactile, Immediate) -->
-        <div class="donate-card fade-up">
-          <div class="donate-card-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span>MAKE AN IMMEDIATE GIFT</span>
+        <!-- Official Zelle® Giving Station (Real, Instant, Fee-Free) -->
+        <div class="zelle-giving-card fade-up">
+          <div class="zelle-badge notranslate" translate="no">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>OFFICIAL ZELLE® GIVING • 100% FEE-FREE</span>
           </div>
 
-          <form data-amani-form="donate" id="donation-form" action="https://formsubmit.co/info@amanikidsnc.org" method="POST">
-            <input type="hidden" name="_subject" value="[AMANI KIDS] Online Donation Pledge">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://www.amanikidsnc.org/get-involved.html?submitted=donation">
-            <div class="form-alert" role="alert"></div>
-
-            <div class="form-group">
-              <label class="form-label">Select Contribution Amount</label>
-              <div class="donation-amount-grid">
-                <button type="button" class="donation-preset-btn" data-amount="35">$35</button>
-                <button type="button" class="donation-preset-btn is-active" data-amount="75">$75</button>
-                <button type="button" class="donation-preset-btn" data-amount="150">$150</button>
-                <button type="button" class="donation-preset-btn" data-amount="500">$500</button>
-              </div>
-              <!-- Real-time dynamic impact pill -->
-              <div id="donation-impact-banner" class="donation-impact-banner">
-                <span class="impact-sparkle">💡</span>
-                <span id="donation-impact-desc">Funds 1 month of after-school academic literacy coaching at Sauti Safe Space.</span>
-              </div>
+          <div class="zelle-grid">
+            <!-- Left: QR Code & Direct Banking Link -->
+            <div class="zelle-qr-wrapper notranslate" translate="no">
+              <img src="images/zelle_qr.jpg" alt="Amani Kids Official Zelle QR Code" class="zelle-qr-img" width="220" height="220">
+              <a href="https://enroll.zellepay.com/qr-codes?data=CnsKICAgICJ0b2tlbiI6ICJhbWFuaWtpZHMyMkBnbWFpbC5jb20iLAogICAgIm5hbWUiOiAiQW1hbmkgS2lkcyBJbmMiLAogICAgImFjdGlvbiI6ICJwYXltZW50Igp9" 
+                 target="_blank" rel="noopener noreferrer" class="btn-zelle-app">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                <span>Open in Banking App</span>
+              </a>
+              <p class="zelle-qr-caption">
+                Scan with your smartphone camera or mobile banking app (Chase, Bank of America, Wells Fargo, etc.) to give instantly.
+              </p>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="custom-amount">Or Enter Custom Amount ($ USD) *</label>
-              <div class="input-currency-wrapper">
-                <span class="input-currency-symbol">$</span>
-                <input class="form-control" type="number" id="custom-amount" name="amount" required min="5" value="75">
+            <!-- Right: Manual Transfer Details & 1-Click Copy -->
+            <div class="zelle-details-list notranslate" translate="no">
+              <!-- Zelle Email -->
+              <div class="zelle-detail-box">
+                <div>
+                  <span class="zelle-detail-label">Zelle® Recipient Email</span>
+                  <span class="zelle-detail-value" id="zelle-email-val">amanikids22@gmail.com</span>
+                </div>
+                <button type="button" class="btn-copy-zelle" data-copy="amanikids22@gmail.com" aria-label="Copy Zelle Email">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Account Name -->
+              <div class="zelle-detail-box">
+                <div>
+                  <span class="zelle-detail-label">Official Registered Name</span>
+                  <span class="zelle-detail-value">Amani Kids Inc</span>
+                </div>
+                <button type="button" class="btn-copy-zelle" data-copy="Amani Kids Inc" aria-label="Copy Organization Name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Suggested Memo -->
+              <div class="zelle-detail-box">
+                <div>
+                  <span class="zelle-detail-label">Memo / Note (Recommended)</span>
+                  <span class="zelle-detail-value" style="font-size: 0.95rem; font-family: var(--font-primary);">Donation - [Your Name]</span>
+                </div>
+              </div>
+
+              <!-- Tax Exempt Note -->
+              <div class="zelle-detail-box" style="background: rgba(204, 88, 51, 0.05); border-color: rgba(204, 88, 51, 0.2);">
+                <div>
+                  <span class="zelle-detail-label" style="color: var(--color-accent);">Tax-Exempt Status</span>
+                  <span class="zelle-detail-value" style="font-size: 0.9rem; font-family: var(--font-primary); font-weight: 600; color: var(--color-accent);">
+                    501(c)(3) Public Charity • 100% Tax Deductible
+                  </span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="form-row-2">
-              <div class="form-group">
-                <label class="form-label" for="donor-first">First Name *</label>
-                <input class="form-control" type="text" id="donor-first" name="first_name" required placeholder="First name">
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="donor-last">Last Name *</label>
-                <input class="form-control" type="text" id="donor-last" name="last_name" required placeholder="Last name">
+          <!-- 3-Step Guide -->
+          <div class="zelle-steps-strip">
+            <div class="zelle-step-item">
+              <span class="zelle-step-num">1</span>
+              <div class="zelle-step-text">
+                <strong>Open Your Bank App</strong><br>Log into Chase, Bank of America, Wells Fargo, etc.
               </div>
             </div>
-
-            <div class="form-group">
-              <label class="form-label" for="donor-email">Email for Tax Receipt *</label>
-              <input class="form-control" type="email" id="donor-email" name="email" required placeholder="donor@example.com">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Gift Frequency</label>
-              <div class="frequency-segmented-control" role="radiogroup">
-                <label class="frequency-option">
-                  <input type="radio" name="frequency" value="one-time" checked>
-                  <span class="frequency-label-pill">One-time gift</span>
-                </label>
-                <label class="frequency-option">
-                  <input type="radio" name="frequency" value="monthly">
-                  <span class="frequency-label-pill">Monthly sustaining ❤️</span>
-                </label>
+            <div class="zelle-step-item">
+              <span class="zelle-step-num">2</span>
+              <div class="zelle-step-text">
+                <strong>Send Money with Zelle®</strong><br>Enter <code style="font-family: var(--font-mono); color: var(--color-primary); font-weight: 700;">amanikids22@gmail.com</code>
               </div>
             </div>
-
-            <button type="submit" id="donation-submit-btn" class="btn btn-accent btn-lg" style="width: 100%; margin-top: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-              <span id="donation-submit-text">Complete $75 Donation</span>
-            </button>
-
-            <div class="donation-trust-badges">
-              <div class="trust-badge-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>501(c)(3) Tax Deductible</span>
-              </div>
-              <div class="trust-badge-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                <span>Instant IRS Receipt</span>
-              </div>
-              <div class="trust-badge-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                <span>256-Bit SSL Encrypted</span>
+            <div class="zelle-step-item">
+              <span class="zelle-step-num">3</span>
+              <div class="zelle-step-text">
+                <strong>Confirm Amani Kids Inc</strong><br>Send any amount fee-free with 100% direct impact.
               </div>
             </div>
-          </form>
+          </div>
+
+          <!-- Optional IRS Tax Receipt Request Box -->
+          <div class="zelle-receipt-wrapper">
+            <h4 class="zelle-receipt-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>Need an Official IRS Tax Deduction Receipt?</span>
+            </h4>
+            <p class="zelle-receipt-desc">
+              If you just sent a gift via Zelle, enter your name and email below so our treasurer can issue an official 501(c)(3) tax receipt.
+            </p>
+
+            <form data-amani-form="receipt" action="https://formsubmit.co/info@amanikidsnc.org" method="POST">
+              <input type="hidden" name="_subject" value="[AMANI KIDS] Zelle Donation - Tax Receipt Request">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://www.amanikidsnc.org/get-involved.html?submitted=receipt">
+              <div class="form-alert" role="alert"></div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="receipt-name">Your Full Name *</label>
+                  <input class="form-control" type="text" id="receipt-name" name="name" required placeholder="Full Name as shown on Zelle">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="receipt-email">Email for Tax Receipt *</label>
+                  <input class="form-control" type="email" id="receipt-email" name="email" required placeholder="you@example.com">
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="receipt-amount">Amount Donated via Zelle ($ USD) *</label>
+                  <input class="form-control" type="number" id="receipt-amount" name="amount" required min="1" placeholder="e.g. 50">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="receipt-note">Optional Program Dedication</label>
+                  <input class="form-control" type="text" id="receipt-note" name="dedication" placeholder="e.g. Sauti Safe Space, Bisakana Day">
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+                Submit Receipt Request
+              </button>
+            </form>
+          </div>
+
         </div>
 
         <!-- Quick pathway links to Volunteer & Partner -->
