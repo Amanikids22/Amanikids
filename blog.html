@@ -558,9 +558,13 @@
           Receive quarterly reflections, program recaps, and invitations to upcoming Bisakana Day festivals directly in your inbox.
         </p>
 
-        <form data-amani-form="newsletter" style="max-width: 540px; margin: 0 auto; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <form data-amani-form="newsletter" action="https://formsubmit.co/info@amanikidsnc.org" method="POST" style="max-width: 540px; margin: 0 auto; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <input type="hidden" name="_subject" value="[AMANI KIDS] Newsletter Subscription">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://www.amanikidsnc.org/blog.html?subscribed=true">
           <div class="form-alert" role="alert" style="width: 100%;"></div>
-          <input type="email" class="form-control" required placeholder="Enter your email address..." style="flex: 1; min-width: 260px;">
+          <input type="email" name="email" class="form-control" required placeholder="Enter your email address..." style="flex: 1; min-width: 260px;">
           <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Subscribe</button>
         </form>
       </div>

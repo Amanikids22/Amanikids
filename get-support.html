@@ -441,7 +441,11 @@
               Fill out this simple, confidential note. An Amani Kids coordinator will reach out to you within 24–48 hours.
             </p>
 
-            <form data-amani-form="support">
+            <form data-amani-form="support" action="https://formsubmit.co/info@amanikidsnc.org" method="POST">
+              <input type="hidden" name="_subject" value="[AMANI KIDS] Urgent Family Support Request">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://www.amanikidsnc.org/get-support.html?submitted=true">
               <div class="form-alert" role="alert"></div>
 
               <div class="form-group">

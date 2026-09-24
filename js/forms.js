@@ -77,11 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 2. Universal Form Submission Handler
+  // 2. Check for native return redirect (?submitted=...)
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('submitted') || urlParams.has('subscribed')) {
+    const alert = document.querySelector('.form-alert');
+    if (alert) {
+      alert.className = 'form-alert success';
+      alert.textContent = 'Thank you! Your information has been successfully received by info@amanikidsnc.org. We will be in touch shortly.';
+      alert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  // 3. Universal Form Submission Handler -> info@amanikidsnc.org
   const forms = document.querySelectorAll('form[data-amani-form]');
+  const RECIPIENT_EMAIL = 'info@amanikidsnc.org';
 
   forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const formType = form.getAttribute('data-amani-form');
@@ -114,11 +126,60 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalHtml = submitBtn ? submitBtn.innerHTML : 'Submit';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Processing securely...';
+        submitBtn.textContent = 'Sending to info@amanikidsnc.org...';
       }
 
-      // Simulate network request
-      setTimeout(() => {
+      // Collect form fields
+      const formData = new FormData(form);
+      const payload = {};
+
+      formData.forEach((value, key) => {
+        if (payload[key]) {
+          if (Array.isArray(payload[key])) {
+            payload[key].push(value);
+          } else {
+            payload[key] = [payload[key], value];
+          }
+        } else {
+          payload[key] = value;
+        }
+      });
+
+      // Join multi-value inputs like checkboxes into readable text
+      Object.keys(payload).forEach(k => {
+        if (Array.isArray(payload[k])) {
+          payload[k] = payload[k].join(', ');
+        }
+      });
+
+      const formTitles = {
+        contact: 'New Contact Message',
+        support: 'Urgent Family Support Request',
+        volunteer: 'New Volunteer Application',
+        partner: 'New Partnership Inquiry',
+        event: 'New Event RSVP Confirmation',
+        donate: 'Online Donation Pledge',
+        newsletter: 'New Newsletter Subscription'
+      };
+
+      if (!payload['_subject']) {
+        payload['_subject'] = `[AMANI KIDS] ${formTitles[formType] || 'Website Inquiry'} - ${payload.name || payload.email || 'Visitor'}`;
+      }
+      payload['_template'] = 'table';
+      payload['_captcha'] = 'false';
+
+      try {
+        const response = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalHtml;
@@ -129,19 +190,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (alertContainer) {
           alertContainer.className = 'form-alert success';
           if (formType === 'donate') {
-            alertContainer.textContent = 'Thank you deeply for your generous gift to AMANI KIDS! Your donation is 100% tax-deductible, and an official IRS 501(c)(3) tax receipt has been emailed to you.';
+            alertContainer.textContent = 'Thank you deeply for your generous gift to AMANI KIDS! Your donation details have been delivered to info@amanikidsnc.org. An official IRS 501(c)(3) tax receipt will be sent to you.';
           } else if (formType === 'support') {
-            alertContainer.textContent = 'Thank you for reaching out. An Amani Kids coordinator will contact you warmly within 24–48 hours to connect your family with trusted resources.';
+            alertContainer.textContent = 'Thank you for reaching out. Your request has been securely sent to info@amanikidsnc.org. An Amani Kids coordinator will contact you warmly within 24–48 hours.';
           } else if (formType === 'volunteer') {
-            alertContainer.textContent = 'Thank you for stepping forward to serve! Our team will review your volunteer interest and get in touch with orientation details.';
+            alertContainer.textContent = 'Thank you for stepping forward to serve! Your volunteer application has been sent to info@amanikidsnc.org. Our team will review your interest and reach out with orientation details.';
           } else if (formType === 'partner') {
-            alertContainer.textContent = 'Thank you for your partnership inquiry. We look forward to collaborating with your organization to empower African diaspora families.';
+            alertContainer.textContent = 'Thank you for your partnership inquiry. Your details have been delivered to info@amanikidsnc.org. We look forward to collaborating with your organization.';
+          } else if (formType === 'event') {
+            alertContainer.textContent = 'Thank you! Your event RSVP has been sent to info@amanikidsnc.org. We look forward to welcoming you and your family!';
+          } else if (formType === 'newsletter') {
+            alertContainer.textContent = 'Thank you for subscribing! Your email has been added to our community list at info@amanikidsnc.org.';
           } else {
-            alertContainer.textContent = 'Message sent successfully. Thank you for connecting with Amani Kids!';
+            alertContainer.textContent = 'Message sent successfully to info@amanikidsnc.org. Thank you for connecting with Amani Kids!';
           }
           alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-      }, 700);
+      } catch (err) {
+        console.warn('AJAX submission failed, attempting native form submit:', err);
+        // Fallback to native HTML form submission
+        form.submit();
+      }
     });
   });
 });
