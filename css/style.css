@@ -4186,10 +4186,58 @@ textarea.form-control {
 
 /* Compact Direct Donation Portal */
 .donate-direct-portal {
-  padding-top: calc(var(--header-height, 70px) + 2rem);
-  padding-bottom: 4.5rem;
+  padding-top: calc(var(--header-height, 84px) + clamp(2.5rem, 5vw, 4rem));
+  padding-bottom: clamp(3.5rem, 6vw, 5rem);
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
   border-bottom: 1px solid var(--color-border);
+}
+
+/* Dedicated Standalone Portal Sections (Volunteer & Partnerships) */
+.portal-page-section {
+  padding-top: calc(var(--header-height, 84px) + clamp(2.5rem, 5vw, 4rem));
+  padding-bottom: clamp(4rem, 7vw, 6rem);
+  background: var(--color-bg);
+  min-height: calc(100vh - 220px);
+}
+
+.portal-page-section.bg-warm-alt {
+  background: var(--color-bg-alt);
+}
+
+.portal-page-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Institutional Partnership Card - Standalone Sculptural Frame */
+.partnership-card-standalone {
+  background: #FFFFFF;
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(229, 224, 213, 0.85);
+  box-shadow: 0 20px 48px -12px rgba(20, 40, 32, 0.08), 0 2px 8px rgba(20, 40, 32, 0.02);
+  padding: clamp(2.25rem, 4.5vw, 3.75rem);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Volunteer Split Architecture */
+.volunteer-portal-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.volunteer-card-standalone {
+  background: #FFFFFF;
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(229, 224, 213, 0.85);
+  box-shadow: 0 20px 48px -12px rgba(20, 40, 32, 0.08), 0 2px 8px rgba(20, 40, 32, 0.02);
+  padding: clamp(2rem, 3.5vw, 3rem);
+}
+
+.volunteer-editorial-side {
+  padding-top: 0.5rem;
 }
 
 .donate-header-compact {
