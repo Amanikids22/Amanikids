@@ -2477,33 +2477,48 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-primary-dark);
   color: #FAF8F5;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  padding-top: clamp(4.5rem, 7vw, 6.5rem);
-  padding-bottom: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: clamp(3rem, 5vw, 4.5rem);
+  padding-bottom: clamp(2rem, 3vw, 2.75rem);
   position: relative;
   overflow: hidden;
 }
 
-.footer-grid {
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Compact Ultra-Premium 2-Column Grid */
+.footer-compact-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  margin-bottom: 4rem;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
+  margin-bottom: 2.75rem;
 }
 
 .footer-brand p {
-  color: rgba(250, 248, 245, 0.75);
+  color: rgba(250, 248, 245, 0.78);
   font-size: 0.9375rem;
   line-height: 1.65;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  max-width: 320px;
+  margin-top: 1.15rem;
+  margin-bottom: 1.25rem;
+  max-width: 440px;
 }
 
 .footer-status {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.4rem 0.85rem;
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
@@ -2511,42 +2526,93 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(250, 248, 245, 0.9);
 }
 
-.footer-heading {
-  font-size: 1.0625rem;
+/* Official Contacts Glass Card */
+.footer-contact-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+}
+
+.footer-contact-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #FAF8F5;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
   margin-bottom: 1.25rem;
-  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.footer-nav-list {
+.footer-contact-items {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.15rem;
 }
 
-.footer-nav-list a {
-  color: rgba(250, 248, 245, 0.72);
-  font-size: 0.9375rem;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-  display: inline-block;
-}
-
-.footer-nav-list a:hover {
-  color: var(--color-gold);
-  transform: translateX(2px);
-}
-
-.footer-contact-info {
+.footer-contact-item {
   display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+  align-items: flex-start;
+  gap: 1rem;
+  color: rgba(250, 248, 245, 0.88);
   font-size: 0.9375rem;
-  color: rgba(250, 248, 245, 0.75);
+  line-height: 1.5;
 }
 
-.footer-contact-info a:hover {
+.footer-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--color-gold);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.footer-contact-item:hover .footer-contact-icon {
+  background: var(--color-accent);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.footer-contact-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(250, 248, 245, 0.52);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.footer-contact-val {
+  color: #FAF8F5;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-val:hover {
+  color: var(--color-gold);
+}
+
+/* Legacy fallback support */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 2.5rem;
 }
 
 /* Social Media Channels (Footer & Global) */
