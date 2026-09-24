@@ -204,9 +204,10 @@ const indexHtml = `<!DOCTYPE html>
               Learn, Connect, and Grow.
             </div>
             
-            <h1 id="hero-headline" class="display-title">
-              <span data-i18n="hero.title_part1">Empowering Children. Strengthening Families.</span>
-              <span class="serif-em" data-i18n="hero.title_em">Building Communities.</span>
+            <h1 id="hero-headline" class="hero-headline">
+              <span class="hero-title-line line-1" data-i18n="hero.title_line1">Empowering Children.</span>
+              <span class="hero-title-line line-2" data-i18n="hero.title_line2">Strengthening Families.</span>
+              <span class="hero-title-line line-3 serif-em" data-i18n="hero.title_em">Building Communities.</span>
             </h1>
             
             <div class="hero-subtitle-box">

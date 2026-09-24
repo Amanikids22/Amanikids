@@ -233,8 +233,8 @@ html, body {
   }
 
   .hero-headline {
-    font-size: clamp(2rem, 8vw, 2.5rem);
-    line-height: 1.15;
+    font-size: clamp(1.85rem, 7.2vw, 2.35rem);
+    line-height: 1.18;
     margin-bottom: 1.15rem;
     word-break: normal;
     overflow-wrap: break-word;
@@ -242,7 +242,8 @@ html, body {
 
   .hero-headline .serif-em {
     font-size: 1.05em;
-    line-height: 1.1;
+    line-height: 1.14;
+    margin-top: 0.05em;
   }
 
   .hero-lead-text {
