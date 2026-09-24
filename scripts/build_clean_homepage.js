@@ -222,7 +222,7 @@ const indexHtml = `<!DOCTYPE html>
                 </div>
                 <div class="hero-highlight-pill">
                   <span class="highlight-check">✓</span>
-                  <span data-i18n="hero.highlight2">5 Spoken Languages (Swahili, Lingala, French, English, Kinyarwanda)</span>
+                  <span data-i18n="hero.highlight2">8+ Spoken Languages (Swahili, Lingala, French, English, Kirundi, Luba & more)</span>
                 </div>
                 <div class="hero-highlight-pill">
                   <span class="highlight-check">✓</span>
@@ -759,7 +759,7 @@ const indexHtml = `<!DOCTYPE html>
             </button>
             <div id="faq-ans-3" class="faq-answer">
               <div class="faq-answer-inner" data-i18n="faq.a3">
-                Our team natively speaks Swahili, Lingala, French, English, and Kinyarwanda. We ensure that parents can ask sensitive questions and understand legal or educational documents in the language they feel most confident and respected in.
+                Our team natively speaks Swahili, Lingala, French, English, Kirundi, and Luba. We ensure that parents can ask sensitive questions and understand legal or educational documents in the language they feel most confident and respected in.
               </div>
             </div>
           </div>

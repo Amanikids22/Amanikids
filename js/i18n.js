@@ -73,7 +73,7 @@ const AMANI_I18N = {
     'hero.title_em': 'Building Communities.',
     'hero.lead': 'AMANI KIDS is an accredited 501(c)(3) nonprofit organization based in Charlotte, NC. We walk beside African refugee, immigrant, and newcomer families — bridging language access, school enrollment, and community resources with dignity, lived experience, and culturally rooted care.',
     'hero.highlight1': '100% Free Family Services',
-    'hero.highlight2': '5 Spoken Languages (Swahili, Lingala, French, English, Kinyarwanda)',
+    'hero.highlight2': '8+ Spoken Languages (Swahili, Lingala, French, English, Kirundi, Luba & more)',
     'hero.highlight3': 'Mecklenburg County Community Alliances',
     'hero.cta_support': 'GET FAMILY SUPPORT',
     'hero.cta_donate': 'SUPPORT AMANI KIDS',
@@ -157,8 +157,8 @@ const AMANI_I18N = {
     'impact.stat1_desc': 'Refugee and newcomer children & parents reached through direct programming and resource navigation.',
     'impact.stat2_label': 'Community-Led',
     'impact.stat2_desc': 'Programs designed and guided by leaders with direct lived experience of immigrant resettlement.',
-    'impact.stat3_label': 'Primary Languages',
-    'impact.stat3_desc': 'Bilingual navigation in Swahili, Lingala, French, Kinyarwanda, and English for accessible support.',
+    'impact.stat3_label': '8+ Spoken Languages',
+    'impact.stat3_desc': 'Multilingual navigation in Swahili, Lingala, French, Kirundi, Luba, Zambian languages, and English for accessible support.',
     'impact.stat4_label': 'Verified Nonprofit',
     'impact.stat4_desc': 'Accountable, transparent 501(c)(3) status operating with fiscal integrity in Charlotte, NC.',
 
@@ -280,7 +280,7 @@ const AMANI_I18N = {
 
     'team.patricia_role': 'Family Education Coordinator',
     'team.patricia_sub': 'School Advocacy & Academic Integration',
-    'team.patricia_bio': 'Liaises directly with Charlotte-Mecklenburg Schools (CMS) teachers, counselors, and ESL specialists to ensure diaspora children receive equitable academic support and accommodations.',
+    'team.patricia_bio': 'Liaises directly with schools, teachers, counselors, and ESL specialists to ensure diaspora children receive equitable academic support and accommodations.',
 
     'team.ruth_role': 'Bisakana Day Program Manager',
     'team.ruth_sub': 'Cultural Arts & Community Heritage Festivals',
@@ -292,7 +292,7 @@ const AMANI_I18N = {
 
     'team.esther_role': 'Sauti Safe Space Program Manager',
     'team.esther_sub': 'Youth Mental Health, Literacy & Healing Circles',
-    'team.esther_bio': 'Creates nurturing safe spaces for immigrant and refugee children to express feelings, build emotional resilience, overcome trauma, and strengthen reading confidence.',
+    'team.esther_bio': 'Originally from Zambia, Esther directs the Sauti Safe Space program, creating protective, empowering peer circles where youth process trauma, build creative voices, and form lasting friendships in Swahili, Zambian languages, and English.',
 
     'team.yao_role': 'Educator & Admin Data Manager',
     'team.yao_sub': 'Academic Tutoring & Impact Analytics',
@@ -339,7 +339,7 @@ const AMANI_I18N = {
     'faq.q2': 'Are Amani Kids services completely free of charge for families?',
     'faq.a2': 'Yes, 100% free. No newcomer family ever pays for school enrollment advocacy, after-school literacy tutoring, cultural events, or family case navigation. Amani Kids is an independent 501(c)(3) public charity funded through compassionate individual donors, philanthropic grants, and community partners.',
     'faq.q3': 'What languages does your bilingual team speak?',
-    'faq.a3': 'Our team natively speaks Swahili, Lingala, French, English, and Kinyarwanda. We ensure that parents can ask sensitive questions and understand legal or educational documents in the language they feel most confident and respected in.',
+    'faq.a3': 'Our team natively speaks 8+ languages and regional dialects including Swahili, Lingala, French, English, Kirundi, Luba, and Zambian languages. We ensure that parents can ask sensitive questions and understand legal or educational documents in the language they feel most confident and respected in.',
     'faq.q4': 'Is my financial donation tax-deductible?',
     'faq.a4': 'Yes. Amani Kids Inc. is a registered 501(c)(3) non-profit organization recognized by the IRS. Contributions are tax-deductible to the fullest extent permitted by law. You receive an official tax receipt immediately following your donation for your tax records.',
     'faq.q5': 'How can I get involved as a volunteer or mentor in Charlotte?',
@@ -423,7 +423,7 @@ const AMANI_I18N = {
     'hero.title_em': 'Bâtir des communautés.',
     'hero.lead': 'AMANI KIDS est une organisation 501(c)(3) accréditée basée à Charlotte, Caroline du Nord. Nous accompagnons les familles réfugiées et immigrées de la diaspora africaine — reliant l’accès linguistique, l’inscription scolaire et les ressources communautaires avec dignité, expérience vécue et bienveillance.',
     'hero.highlight1': 'Services aux familles 100% gratuits',
-    'hero.highlight2': '5 langues parlées (swahili, lingala, français, anglais, kinyarwanda)',
+    'hero.highlight2': '8+ langues parlées (swahili, lingala, français, anglais, kirundi, luba & plus)',
     'hero.highlight3': 'Alliances communautaires dans le comté de Mecklenburg',
     'hero.cta_support': 'DEMANDER DU SOUTIEN',
     'hero.cta_donate': 'SOUTENIR AMANI KIDS',
@@ -507,8 +507,8 @@ const AMANI_I18N = {
     'impact.stat1_desc': 'Enfants et parents réfugiés ou immigrants soutenus par nos programmes et notre orientation directe.',
     'impact.stat2_label': 'Dirigé par la Communauté',
     'impact.stat2_desc': 'Programmes pensés et animés par des leaders ayant vécu personnellement l’expérience de l’immigration.',
-    'impact.stat3_label': 'Langues d’Accompagnement',
-    'impact.stat3_desc': 'Soutien bilingue en swahili, lingala, français, kinyarwanda et anglais pour un accès sans barrière.',
+    'impact.stat3_label': '8+ Langues Parlées',
+    'impact.stat3_desc': 'Soutien multilingue en swahili, lingala, français, kirundi, luba, langues zambiennes et anglais pour un accès sans barrière.',
     'impact.stat4_label': 'Organisme Certifié',
     'impact.stat4_desc': 'Statut caritatif officiel 501(c)(3) opérant avec une rigoureuse transparence financière à Charlotte.',
 
@@ -630,7 +630,7 @@ const AMANI_I18N = {
 
     'team.patricia_role': 'Coordinatrice de l\'Éducation Familiale',
     'team.patricia_sub': 'Plaidoyer Scolaire & Intégration Pédagogique',
-    'team.patricia_bio': 'Assure la liaison directe avec les enseignants des écoles CMS et les spécialistes ESL afin de garantir aux enfants de la diaspora un suivi pédagogique adapté et juste.',
+    'team.patricia_bio': 'Assure la liaison directe avec les écoles, les enseignants et les spécialistes ESL afin de garantir aux enfants de la diaspora un suivi pédagogique adapté et juste.',
 
     'team.ruth_role': 'Responsable du Programme Bisakana Day',
     'team.ruth_sub': 'Arts Culturels & Célébrations de la Diaspora',
@@ -642,7 +642,7 @@ const AMANI_I18N = {
 
     'team.esther_role': 'Responsable du Programme Sauti Safe Space',
     'team.esther_sub': 'Santé Mentale des Jeunes, Alphabétisation & Cercles de Parole',
-    'team.esther_bio': 'Crée un cadre sécurisant où les enfants réfugiés peuvent exprimer leurs émotions, surmonter les épreuves de l\'exil et développer leur confiance en lecture.',
+    'team.esther_bio': 'Originaire de Zambie, Esther dirige le programme Sauti Safe Space, créant un cadre sécurisant où les jeunes réfugiés s\'épanouissent, surmontent les traumatismes et s\'expriment en swahili, langues zambiennes et anglais.',
 
     'team.yao_role': 'Éducateur & Responsable des Données Administratives',
     'team.yao_sub': 'Tutorat Académique & Suivi des Données d\'Impact',
@@ -685,11 +685,11 @@ const AMANI_I18N = {
     'faq.title': 'Des réponses claires sur notre mission.',
     'faq.lead': 'Tout ce que vous devez savoir sur nos services, nos langues, la déductibilité fiscale de vos dons et les opportunités bénévoles.',
     'faq.q1': 'Comment Amani Kids accompagne-t-il les familles réfugiées et immigrées nouvellement arrivées ?',
-    'faq.a1': 'Nous offrons un accompagnement global et respectueux de chaque culture : inscription scolaire bilingue auprès du district de Charlotte-Mecklenburg, orientation vers les services de santé, mentorat scolaire après la classe et grands événements d’intégration comme le Festival Bisakana. Chaque famille est accueillie par des référents qui parlent sa langue maternelle et partagent l’expérience de la réinstallation.',
+    'faq.a1': 'Nous offrons un accompagnement global et respectueux de chaque culture : inscription scolaire bilingue, orientation vers les services de santé, mentorat et grands événements d’intégration comme le Festival Bisakana. Chaque famille est accueillie par des référents qui parlent sa langue maternelle et partagent l’expérience de la réinstallation.',
     'faq.q2': 'Les services et programmes d’Amani Kids sont-ils entièrement gratuits pour les familles ?',
     'faq.a2': 'Oui, absolument 100% gratuits. Aucune famille nouvellement arrivée ne débourse un seul centime pour les démarches scolaires, le soutien pédagogique, les activités du festival ou l’orientation sociale. Amani Kids est un organisme caritatif 501(c)(3) financé par la générosité des donateurs, des subventions et des partenaires communautaires.',
     'faq.q3': 'Dans quelles langues votre équipe intervient-elle ?',
-    'faq.a3': 'Notre équipe s’exprime couramment en swahili, lingala, français, anglais et kinyarwanda. Nous veillons à ce que les parents puissent poser leurs questions et appréhender les documents scolaires et administratifs dans la langue où ils se sentent le plus à l’aise.',
+    'faq.a3': 'Notre équipe s’exprime couramment dans plus de 8 langues et dialectes, notamment le swahili, le lingala, le français, l’anglais, le kirundi, le luba et les langues zambiennes. Nous veillons à ce que les parents puissent poser leurs questions et appréhender les documents scolaires et administratifs dans la langue où ils se sentent le plus à l’aise.',
     'faq.q4': 'Mon don financier est-il déductible des impôts ?',
     'faq.a4': 'Oui. Amani Kids Inc. est une organisation à but non lucratif reconnue d’utilité publique sous le statut fiscal fédéral 501(c)(3). Tous les dons sont déductibles d’impôts conformément aux lois fiscales en vigueur. Un reçu officiel vous est immédiatement délivré.',
     'faq.q5': 'Comment puis-je m’engager comme bénévole ou mentor à Charlotte ?',

@@ -51,7 +51,7 @@ const teamMembers = [
     subText: "Fiscal Stewardship & 501(c)(3) Compliance",
     bioKey: "team.samy_bio",
     bioText: "Ensures rigorous financial integrity, institutional grant accounting, and transparent stewardship so every donor dollar directly strengthens educational and family programs.",
-    langs: "French • English • Swahili"
+    langs: "Swahili • Luba • French • English"
   },
   {
     category: "exec",
@@ -64,7 +64,7 @@ const teamMembers = [
     subText: "Regulatory Compliance & Civic Rights Advocacy",
     bioKey: "team.roger_bio",
     bioText: "Provides legal counsel on nonprofit governance, contractual agreements, and immigrant civil rights, helping families understand their legal rights and pathways in the U.S.",
-    langs: "French • Lingala • English"
+    langs: "Luba • Lingala • French • English"
   },
   {
     category: "comm",
@@ -77,7 +77,7 @@ const teamMembers = [
     subText: "Community Alliances & Institutional Outreach",
     bioKey: "team.hadley_bio",
     bioText: "Builds bridges with Charlotte civic leaders, local universities, corporate donors, and foundation partners to expand Amani Kids' visibility and philanthropic resources.",
-    langs: "English • French"
+    langs: "English"
   },
   {
     category: "comm",
@@ -102,8 +102,8 @@ const teamMembers = [
     subKey: "team.patricia_sub",
     subText: "School Advocacy & Academic Integration",
     bioKey: "team.patricia_bio",
-    bioText: "Liaises directly with Charlotte-Mecklenburg Schools (CMS) teachers, counselors, and ESL specialists to ensure diaspora children receive equitable academic support and accommodations.",
-    langs: "French • Regional Dialects • English"
+    bioText: "Liaises directly with schools, teachers, counselors, and ESL specialists to ensure diaspora children receive equitable academic support and accommodations.",
+    langs: "Lingala • French • Regional Dialects • English"
   },
   {
     category: "prog",
@@ -129,7 +129,7 @@ const teamMembers = [
     subText: "Community Resource Navigation & Urgent Intake",
     bioKey: "team.priscilla_bio",
     bioText: "Guides families through essential housing, healthcare clinics, food pantry networks, and city services, breaking isolation through personalized bilingual casework.",
-    langs: "French • Lingala • English"
+    langs: "Swahili • Lingala • French • English"
   },
   {
     category: "prog",
@@ -141,8 +141,8 @@ const teamMembers = [
     subKey: "team.esther_sub",
     subText: "Youth Mental Health, Literacy & Healing Circles",
     bioKey: "team.esther_bio",
-    bioText: "Directs the Sauti Safe Space program, creating protective, empowering weekly peer circles where refugee youth process trauma, build creative voices, and form lasting friendships.",
-    langs: "Swahili • French • English"
+    bioText: "Originally from Zambia, Esther directs the Sauti Safe Space program, creating protective, empowering peer circles where refugee youth process trauma, build creative voices, and form lasting friendships.",
+    langs: "Swahili • Zambian Languages • English"
   },
   {
     category: "comm",
