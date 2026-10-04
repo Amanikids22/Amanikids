@@ -410,7 +410,14 @@ const AMANI_I18N = {
     'partner.collab3_title': 'Corporate Sponsors',
     'partner.collab3_desc': 'Sponsor Bisakana Day festivals, underwrite youth literacy supplies, and engage employee volunteers.',
     'partner.collab4_title': 'Civic Coalitions',
-    'partner.collab4_desc': 'Community coalitions fighting youth isolation, housing precarity, and supporting equitable resettlement.'
+    'partner.collab4_desc': 'Community coalitions fighting youth isolation, housing precarity, and supporting equitable resettlement.',
+
+    // Community Action Red Strip
+    'action.pill': 'COMMUNITY ACTION • CHARLOTTE NC',
+    'action.title': 'Every child deserves dignity, belonging, and a community that walks beside them.',
+    'action.lead': 'Join our network of passionate mentors, bilingual volunteers, and community partners making a tangible daily difference for African refugee, immigrant, and newcomer families in Charlotte, NC.',
+    'action.btn_volunteer': 'VOLUNTEER WITH US',
+    'action.btn_support': 'GET FAMILY SUPPORT'
   },
 
   fr: {
@@ -819,7 +826,14 @@ const AMANI_I18N = {
     'partner.collab3_title': 'Entreprises Partenaires',
     'partner.collab3_desc': 'Parrainez le festival Bisakana, financez des manuels bilingues et mobilisez vos équipes.',
     'partner.collab4_title': 'Coalitions Civiques',
-    'partner.collab4_desc': 'Coalitions citoyennes luttant contre l\'isolement des jeunes et pour une réinstallation digne.'
+    'partner.collab4_desc': 'Coalitions citoyennes luttant contre l\'isolement des jeunes et pour une réinstallation digne.',
+
+    // Community Action Red Strip
+    'action.pill': 'ACTION COMMUNAUTAIRE • CHARLOTTE NC',
+    'action.title': 'Chaque enfant mérite la dignité, l\'appartenance et une communauté à ses côtés.',
+    'action.lead': 'Rejoignez notre réseau de mentors passionnés, de bénévoles bilingues et de partenaires engagés pour soutenir concrètement les familles réfugiées et immigrées.',
+    'action.btn_volunteer': 'DEVENIR BÉNÉVOLE',
+    'action.btn_support': 'DEMANDER UN SOUTIEN'
   }
 };
 

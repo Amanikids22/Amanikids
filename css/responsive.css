@@ -528,6 +528,27 @@ html, body {
   .faq-section {
     padding: 4.5rem 0;
   }
+
+  .action-red-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    text-align: center;
+  }
+
+  .action-red-lead {
+    margin: 0 auto;
+  }
+
+  .action-red-buttons {
+    align-items: center;
+    width: 100%;
+  }
+
+  .btn-action-white,
+  .btn-action-outline {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 /* Standard Mobile (≤ 680px) */
@@ -595,6 +616,12 @@ html, body {
     max-width: 100%;
     border-radius: var(--radius-xs);
     box-shadow: 0 4px 14px rgba(30, 58, 47, 0.1);
+  }
+
+  /* Resettlement Challenge Mobile */
+  .challenge-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   /* Quick-fire FAQ Mobile */
