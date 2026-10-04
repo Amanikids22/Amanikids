@@ -343,7 +343,7 @@ const AMANI_I18N = {
     'faq.q4': 'Is my financial donation tax-deductible?',
     'faq.a4': 'Yes. Amani Kids Inc. is a registered 501(c)(3) non-profit organization recognized by the IRS. Contributions are tax-deductible to the fullest extent permitted by law. You receive an official tax receipt immediately following your donation for your tax records.',
     'faq.q5': 'How can I get involved as a volunteer or mentor in Charlotte?',
-    'faq.a5': 'We actively welcome compassionate volunteers to mentor youth, assist with after-school reading circles, interpret, coordinate event logistics for Bisakana Day, or provide professional expertise. You can fill out our volunteer intake form or email us at info@amanikidsnc.org.',
+    'faq.a5': 'We actively welcome compassionate volunteers to mentor youth, assist with after-school reading circles, interpret, coordinate event logistics for Bisakana Day, or provide professional expertise. You can fill out our volunteer intake form or email us at amanikids@amanikidsnc.org.',
 
     // High-Impact Conversion Banner (Applied Pattern)
     'conversion.tag': 'GET IN TOUCH • WE ARE HERE FOR YOU',
@@ -759,7 +759,7 @@ const AMANI_I18N = {
     'faq.q4': 'Mon don financier est-il déductible des impôts ?',
     'faq.a4': 'Oui. Amani Kids Inc. est une organisation à but non lucratif reconnue d’utilité publique sous le statut fiscal fédéral 501(c)(3). Tous les dons sont déductibles d’impôts conformément aux lois fiscales en vigueur. Un reçu officiel vous est immédiatement délivré.',
     'faq.q5': 'Comment puis-je m’engager comme bénévole ou mentor à Charlotte ?',
-    'faq.a5': 'Nous accueillons avec grand plaisir des bénévoles engagés pour accompagner les jeunes, animer des cercles de lecture, assurer des missions d’interprétariat ou participer à l’organisation de nos événements communautaires. Remplissez simplement notre formulaire bénévole ou écrivez-nous à info@amanikidsnc.org.',
+    'faq.a5': 'Nous accueillons avec grand plaisir des bénévoles engagés pour accompagner les jeunes, animer des cercles de lecture, assurer des missions d’interprétariat ou participer à l’organisation de nos événements communautaires. Remplissez simplement notre formulaire bénévole ou écrivez-nous à amanikids@amanikidsnc.org.',
 
     // High-Impact Conversion Banner (Applied Pattern)
     'conversion.tag': 'CONTACT DIRECT • À VOS CÔTÉS',
