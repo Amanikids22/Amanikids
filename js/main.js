@@ -14,23 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // Log system readiness
   console.log('Amani Kids website initialized. Peace • Belonging • Community.');
 
-  // Initialize Quick-Fire FAQ Accordion (Applied Pattern)
+  // Initialize Quick-Fire FAQ Accordion (Instant, zero-lag CSS Grid animation)
   const faqQuestions = document.querySelectorAll('.faq-question');
   faqQuestions.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const item = btn.closest('.faq-item');
-      const answer = item.querySelector('.faq-answer');
+      if (!item) return;
+
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
-      // Toggle current item
       if (isExpanded) {
         btn.setAttribute('aria-expanded', 'false');
         item.classList.remove('active');
-        if (answer) answer.style.maxHeight = null;
       } else {
         btn.setAttribute('aria-expanded', 'true');
         item.classList.add('active');
-        if (answer) answer.style.maxHeight = (answer.scrollHeight + 30) + 'px';
       }
     });
   });

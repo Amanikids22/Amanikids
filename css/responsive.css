@@ -637,6 +637,8 @@ html, body {
     padding: 1.25rem 0.25rem;
     font-size: 1.05rem;
     gap: 1rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .faq-toggle-icon {
