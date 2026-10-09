@@ -68,7 +68,7 @@ const newFooter = `  <!-- FOOTER -->
               </span>
               <div>
                 <span class="footer-contact-label">Direct Phone</span>
-                <a href="tel:+17049129379" class="footer-contact-val">+1 (704) 912-9379</a>
+                <a href="tel:+17048662930" class="footer-contact-val">+1 (704) 866-2930</a>
               </div>
             </div>
 

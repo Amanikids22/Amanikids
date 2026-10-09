@@ -184,7 +184,7 @@ const generateHeaderAndDrawer = (activePage) => `  <!-- 1. FLOATING NAVIGATION I
       <div class="mobile-drawer-contact">
         <p class="notranslate" translate="no"><strong>AMANI KIDS</strong> • 501(c)(3) Nonprofit</p>
         <p class="notranslate" translate="no">3400 Shamrock Dr., Suite D, Charlotte, NC</p>
-        <p><a href="tel:+17049129379" class="notranslate" translate="no">+1 (704) 912-9379</a></p>
+        <p><a href="tel:+17048662930" class="notranslate" translate="no">+1 (704) 866-2930</a></p>
       </div>
     </div>
   </aside>`;
