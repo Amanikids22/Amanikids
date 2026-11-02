@@ -568,6 +568,8 @@ const AMANI_I18N = {
     'st.s4_p8': 'Her journey is a powerful reminder that when young refugee women receive encouragement, guidance, and opportunities, they can overcome barriers and build the futures they dream of.',
     'st.s4_impact_label': 'THE IMPACT',
     'st.s4_impact_text': 'We believe every refugee girl deserves the opportunity to complete her education, discover her potential, and pursue her dreams. Salama\'s story represents the importance of investing in young women and reminding them that their future is full of possibilities.',
+    'st.s4_img_caption': 'Salama\'s educational journey is a reminder that determination, encouragement, and opportunity can open doors to a brighter future.',
+    'st.s4_img_alt': 'Salama wearing her blue graduation gown, cap, and Congolese flag scarf celebrating her high school graduation',
 
     // Story 05
     'st.s5_num': 'STORY 05',
@@ -1489,6 +1491,8 @@ const AMANI_I18N = {
     'st.s4_p8': 'Son parcours est une démonstration éclatante que lorsque les jeunes femmes réfugiées reçoivent encouragements, accompagnement et opportunités, elles peuvent surmonter tous les obstacles et bâtir l\'avenir auquel elles aspirent.',
     'st.s4_impact_label': 'L’IMPACT RÉALISÉ',
     'st.s4_impact_text': 'Nous croyons que chaque jeune fille réfugiée mérite de mener ses études à leur terme, de découvrir son potentiel et de poursuivre ses rêves. L\'histoire de Salama incarne l\'importance d\'investir dans la jeunesse féminine et de lui rappeler que son avenir regorge de promesses.',
+    'st.s4_img_caption': 'Le parcours scolaire de Salama nous rappelle que la détermination, l\'encouragement et les opportunités peuvent ouvrir les portes d\'un avenir meilleur.',
+    'st.s4_img_alt': 'Salama portant sa toge, sa toque bleue de remise des diplômes et son écharpe aux couleurs de la RDC pour célébrer sa réussite scolaire',
 
     // Story 05
     'st.s5_num': 'RÉCIT 05',
