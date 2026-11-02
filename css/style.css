@@ -5390,3 +5390,276 @@ textarea.form-control {
   flex-wrap: wrap;
   margin-top: 2rem;
 }
+
+/* ==========================================================================
+   STORY 05: JUDITH'S EDITORIAL PHOTO GALLERY
+   ========================================================================== */
+.judith-editorial-gallery {
+  margin: 2.5rem 0 2rem;
+  background: linear-gradient(180deg, rgba(250, 248, 245, 0.95) 0%, rgba(244, 240, 233, 0.98) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: 0 12px 30px rgba(30, 58, 47, 0.04);
+}
+
+.judith-gallery-header {
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+
+.judith-gallery-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.judith-gallery-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.judith-gallery-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Feature Hero Card (Outcome) */
+.judith-gallery-feature {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(30, 58, 47, 0.05);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.judith-gallery-feature:hover {
+  box-shadow: 0 14px 32px rgba(30, 58, 47, 0.08);
+}
+
+.gallery-card-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface-alt);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-feature-frame {
+  aspect-ratio: 9 / 14;
+  max-height: 440px;
+}
+
+.gallery-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+
+.judith-gallery-feature:hover .gallery-feature-img {
+  transform: scale(1.03);
+}
+
+.gallery-feature-overlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.gallery-feature-pill {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background: rgba(30, 58, 47, 0.88);
+  backdrop-filter: blur(8px);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery-feature-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.gallery-feature-caption .stage-marker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+}
+
+.gallery-feature-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.gallery-feature-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.gallery-feature-highlight {
+  background: rgba(204, 88, 51, 0.08);
+  border-left: 3px solid var(--color-accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.9375rem;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Supporting 3-Card Grid */
+.judith-gallery-supporting {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.gallery-support-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(30, 58, 47, 0.04);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.gallery-support-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(30, 58, 47, 0.08);
+}
+
+.gallery-support-frame {
+  aspect-ratio: 9 / 13;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: 0.85rem;
+  background: var(--color-surface-alt);
+}
+
+.gallery-support-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.gallery-support-card:hover .gallery-support-img {
+  transform: scale(1.04);
+}
+
+.gallery-stage-pill {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  background: rgba(20, 35, 28, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+}
+
+.gallery-support-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.gallery-support-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.gallery-support-desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 860px) {
+  .judith-gallery-feature {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .gallery-feature-frame {
+    max-height: 380px;
+  }
+  .judith-gallery-supporting {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .gallery-support-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+  .gallery-support-frame {
+    margin-bottom: 0;
+    height: 140px;
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-support-card {
+    grid-template-columns: 1fr;
+  }
+  .gallery-support-frame {
+    height: 220px;
+  }
+}

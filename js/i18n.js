@@ -581,6 +581,24 @@ const AMANI_I18N = {
     'st.s5_impact_label': 'THE IMPACT',
     'st.s5_impact_text': 'Judith\'s story reminds us that newcomers should not have to face life\'s unexpected challenges alone. With compassion, community connections, and access to resources, families can begin to rebuild their lives and look toward a brighter future.',
 
+    
+    // Story 05 — Judith Authentic Photographic Archive
+    'st.s5_g_kicker': 'AUTHENTIC DOCUMENTATION',
+    'st.s5_g_headline': 'Judith’s Journey of Resilience: From Wheelchair to Walking',
+    'st.s5_feat_pill': 'KEY MILESTONE • WALKING AGAIN',
+    'st.s5_feat_title': 'Walking Again & Thriving in the Community',
+    'st.s5_feat_text': 'After surviving a severe car accident, navigating more than $60,000 in medical bills, and undergoing intensive physical therapy, Judith stands tall—proudly active in our Charlotte community.',
+    'st.s5_feat_highlight': '“Today, Judith is walking again, has returned to school, is married, and is the proud mother of a baby girl.”',
+    'st.s5_p1_pill': '01 • RECOVERY',
+    'st.s5_p1_title': 'Hospital Discharge in Wheelchair',
+    'st.s5_p1_desc': 'Returning home after months of hospital care, facing mobility challenges and overwhelming medical expenses.',
+    'st.s5_p2_pill': '02 • PERSEVERANCE',
+    'st.s5_p2_title': 'Navigating Daily Independence',
+    'st.s5_p2_desc': 'Overcoming language and physical barriers with determination during everyday rehabilitation.',
+    'st.s5_p3_pill': '03 • GRADUATION',
+    'st.s5_p3_title': 'Patient Care Technician Diploma',
+    'st.s5_p3_desc': 'Returning to school and earning her credential to care for others in the healthcare field.',
+
     // Closing Organizational Message
     'st.close_eyebrow': 'OUR COMMITMENT',
     'st.close_title': 'More Than Support. A Community That Cares.',
@@ -1479,6 +1497,24 @@ const AMANI_I18N = {
     'st.s5_p8': 'Son cheminement est un puissant témoignage de résilience, d\'espoir et de ce qui devient possible lorsqu\'une personne reçoit un soutien adapté au moment le plus éprouvant de son existence.',
     'st.s5_impact_label': 'L’IMPACT RÉALISÉ',
     'st.s5_impact_text': 'L\'histoire de Judith nous rappelle que les nouveaux arrivants ne devraient jamais affronter seuls les drames imprévus de l\'existence. Grâce à la compassion, aux solidarités locales et à l\'accès aux ressources, les familles peuvent reconstruire leur vie et regarder vers un avenir plus radieux.',
+
+    
+    // Story 05 — Judith Authentic Photographic Archive
+    'st.s5_g_kicker': 'DOCUMENTATION AUTHENTIQUE',
+    'st.s5_g_headline': 'Le Parcours de Résilience de Judith : Du Fauteuil Roulant à la Marche',
+    'st.s5_feat_pill': 'JALON CLÉ • REMARCHER DEBOUT',
+    'st.s5_feat_title': 'Remarcher, Se Reconstruire et S’épanouir',
+    'st.s5_feat_text': 'Après avoir survécu à un grave accident, fait face à plus de 60 000 $ de factures médicales et suivi une rééducation intensive, Judith se tient fièrement debout — active au cœur de notre communauté à Charlotte.',
+    'st.s5_feat_highlight': '« Aujourd’hui, Judith marche à nouveau, a repris ses études, s’est mariée et est la fière maman d’une petite fille. »',
+    'st.s5_p1_pill': '01 • RÉTABLISSEMENT',
+    'st.s5_p1_title': 'Sortie d’Hôpital en Fauteuil',
+    'st.s5_p1_desc': 'De retour chez elle après des mois d’hospitalisation, confrontée aux défis de mobilité et aux frais médicaux accablants.',
+    'st.s5_p2_pill': '02 • PERSÉVÉRANCE',
+    'st.s5_p2_title': 'L’Autonomie au Quotidien',
+    'st.s5_p2_desc': 'Surmonter les obstacles linguistiques et physiques avec courage dans chaque geste de rééducation.',
+    'st.s5_p3_pill': '03 • DIPLÔME & AVENIR',
+    'st.s5_p3_title': 'Diplôme de Patient Care Technician',
+    'st.s5_p3_desc': 'Reprendre les études et obtenir son diplôme pour se dévouer aux soins d’autrui dans le secteur médical.',
 
     // Closing Organizational Message
     'st.close_eyebrow': 'NOTRE ENGAGEMENT',
