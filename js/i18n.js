@@ -523,6 +523,7 @@ const AMANI_I18N = {
     'st.s1_impact_label': 'THE IMPACT',
     'st.s1_impact_text': 'By connecting families with the right educational resources, we help children overcome barriers and create pathways toward academic success.',
     'st.s1_img_caption': 'A newcomer family connected with essential school supplies, backpacks, and bilingual after-school learning support in Charlotte, NC.',
+    'st.s1_img_alt': 'A mother and three smiling children holding school backpacks and educational tote bags at an after-school community center in Charlotte',
 
     // Story 02
     'st.s2_num': 'STORY 02',
@@ -535,6 +536,8 @@ const AMANI_I18N = {
     'st.s2_p4': 'What might have seemed like a small task became an important opportunity to make sure their children could participate in school activities alongside their classmates.',
     'st.s2_impact_label': 'THE IMPACT',
     'st.s2_impact_text': 'By helping parents understand school communications, we strengthen family-school connections and help ensure that language barriers do not prevent children from participating in important educational experiences.',
+    'st.s2_img_caption': 'Supporting families with the resources children need to participate and thrive in school.',
+    'st.s2_img_alt': 'An Amani Kids representative with a mother and daughter receiving school supplies and learning materials.',
 
     // Story 03
     'st.s3_num': 'STORY 03',
@@ -1441,6 +1444,7 @@ const AMANI_I18N = {
     'st.s1_impact_label': 'L’IMPACT RÉALISÉ',
     'st.s1_impact_text': 'En reliant les familles aux ressources éducatives adaptées, nous aidons les enfants à surmonter les obstacles et nous ouvrons des voies durables vers la réussite scolaire.',
     'st.s1_img_caption': 'Une famille nouvellement arrivée recevant des fournitures scolaires, des cartables et un accompagnement éducatif périscolaire à Charlotte, NC.',
+    'st.s1_img_alt': 'Une mère et trois enfants souriants tenant des sacs d\'école et des tote bags dans un centre éducatif communautaire à Charlotte',
 
     // Story 02
     'st.s2_num': 'RÉCIT 02',
@@ -1453,6 +1457,8 @@ const AMANI_I18N = {
     'st.s2_p4': 'Ce qui aurait pu sembler être une simple formalité administrative s\'est transformé en une opportunité essentielle : permettre aux enfants de prendre part aux activités éducatives aux côtés de tous leurs camarades.',
     'st.s2_impact_label': 'L’IMPACT RÉALISÉ',
     'st.s2_impact_text': 'En aidant les parents à comprendre les communications de l\'école, nous renforçons les liens famille-école et veillons à ce que la barrière de la langue n\'empêche jamais un enfant de participer à des expériences éducatives enrichissantes.',
+    'st.s2_img_caption': 'Accompagner les familles avec les ressources nécessaires pour que chaque enfant participe pleinement et s\'épanouisse à l\'école.',
+    'st.s2_img_alt': 'Une représentante d\'Amani Kids aux côtés d\'une mère et de sa fille recevant des fournitures scolaires et du matériel pédagogique.',
 
     // Story 03
     'st.s3_num': 'RÉCIT 03',
@@ -2150,6 +2156,15 @@ class AmaniLanguageManager {
       const key = input.getAttribute('data-i18n-placeholder');
       if (dict[key] !== undefined) {
         input.placeholder = dict[key];
+      }
+    });
+
+    // 3. Translate image alt attributes for accessibility
+    const imgs = document.querySelectorAll('[data-i18n-alt]');
+    imgs.forEach(img => {
+      const key = img.getAttribute('data-i18n-alt');
+      if (dict[key] !== undefined) {
+        img.alt = dict[key];
       }
     });
   }
