@@ -30,7 +30,7 @@
     <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
   </svg>
 
-            <!-- 1. FLOATING NAVIGATION ISLAND (ELITE EDITORIAL ARCHITECTURE) -->
+  <!-- 1. FLOATING NAVIGATION ISLAND (ELITE EDITORIAL ARCHITECTURE) -->
   <header class="site-header" role="banner">
     <div class="nav-island">
       <a href="index.html" class="brand-logo notranslate" translate="no" aria-label="AMANI KIDS Home">
@@ -175,8 +175,7 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer Backdrop & Drawer -->
-        <!-- MOBILE NAVIGATION DRAWER (Accordion Architecture) -->
+  <!-- MOBILE NAVIGATION DRAWER (Accordion Architecture) -->
   <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
   <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu" aria-hidden="true">
     <div class="mobile-drawer-header">
@@ -340,9 +339,9 @@
         </div>
       </div>
       <div class="mobile-drawer-contact">
-        <p class="notranslate" translate="no"><strong>AMANI KIDS</strong> • 501(c)(3) Nonprofit</p>
-        <p class="notranslate" translate="no">3400 Shamrock Dr., Suite D, Charlotte, NC</p>
-        <p><a href="tel:+17048662930" class="notranslate" translate="no">+1 (704) 866-2930</a></p>
+        <p data-i18n="nav.drawer_nonprofit"><strong>AMANI KIDS</strong> • 501(c)(3) Nonprofit</p>
+        <p>3400 Shamrock Dr., Suite D, Charlotte, NC</p>
+        <p><a href="tel:+17048662930">+1 (704) 866-2930</a></p>
       </div>
     </div>
   </aside>
@@ -352,11 +351,11 @@
     <!-- PAGE HERO -->
     <section class="page-hero">
       <div class="container page-hero-content fade-up">
-        <div class="eyebrow eyebrow-pill">PHOTO ARCHIVE & MEMORIES</div>
-        <h1 class="page-hero-title">
+        <div class="eyebrow eyebrow-pill" data-i18n="alb.hero_eyebrow">PHOTO ARCHIVE & MEMORIES</div>
+        <h1 class="page-hero-title" data-i18n="alb.hero_title">
           Our Living <span class="serif-italic text-accent">Community Album.</span>
         </h1>
-        <p class="lead-text" style="margin: 0 auto;">
+        <p class="lead-text" style="margin: 0 auto;" data-i18n="alb.hero_lead">
           Authentic moments of joy, education, play, and solidarity captured across our Charlotte programs, Bisakana festivals, and family mentorship circles.
         </p>
       </div>
@@ -368,11 +367,11 @@
         
         <!-- Filter Tabs -->
         <div class="gallery-filters fade-up" role="tablist" aria-label="Album Filters">
-          <button class="gallery-filter-btn active" data-filter="all">All Moments</button>
-          <button class="gallery-filter-btn" data-filter="bisakana">Bisakana Day</button>
-          <button class="gallery-filter-btn" data-filter="sauti">Sauti Safe Space</button>
-          <button class="gallery-filter-btn" data-filter="family">Family & Community</button>
-          <button class="gallery-filter-btn" data-filter="sports">Sports & Play</button>
+          <button class="gallery-filter-btn active" data-filter="all" data-i18n="alb.filter_all">All Moments</button>
+          <button class="gallery-filter-btn" data-filter="bisakana" data-i18n="alb.filter_bisakana">Bisakana Day</button>
+          <button class="gallery-filter-btn" data-filter="sauti" data-i18n="alb.filter_sauti">Sauti Safe Space</button>
+          <button class="gallery-filter-btn" data-filter="family" data-i18n="alb.filter_family">Family & Community</button>
+          <button class="gallery-filter-btn" data-filter="sports" data-i18n="alb.filter_sports">Sports & Play</button>
         </div>
 
         <!-- Photo Grid -->
@@ -381,117 +380,162 @@
           <!-- Photo 1: Bisakana Outdoor Games & Fun -->
           <div class="gallery-card fade-up" data-category="bisakana" 
                data-src="images/amani_bisakana_day.jpg" 
-               data-caption="Bisakana Day Festival: Children, families, and community members enjoying outdoor celebrations in Charlotte, NC" 
-               data-date="Annual Cultural Festival" data-tag="Bisakana Day">
+               data-caption="Bisakana Day Festival: Children, families, and community members enjoying outdoor celebrations in Charlotte, NC"
+               data-caption-en="Bisakana Day Festival: Children, families, and community members enjoying outdoor celebrations in Charlotte, NC"
+               data-caption-fr="Festival Bisakana Day : Enfants, familles et membres de la communauté profitant des célébrations en plein air à Charlotte, NC"
+               data-date="Annual Cultural Festival"
+               data-date-en="Annual Cultural Festival"
+               data-date-fr="Festival Culturel Annuel"
+               data-tag="Bisakana Day">
             <img src="images/amani_bisakana_day.jpg" 
                  alt="Bisakana Day festival celebrations with children and families in Charlotte NC" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Bisakana Day</span>
-              <div class="gallery-title">Joy & Outdoor Play in Community</div>
+              <span class="gallery-tag" data-i18n="alb.c1_tag">Bisakana Day</span>
+              <div class="gallery-title" data-i18n="alb.c1_title">Joy & Outdoor Play in Community</div>
             </div>
           </div>
 
           <!-- Photo 2: Bisakana Welcome Banner -->
           <div class="gallery-card fade-up" data-category="bisakana" 
                data-src="images/amani_bisakana_welcome_banner.jpg" 
-               data-caption="Welcome to Bisakana Day: Festive welcoming arch, balloons, and joyful smiles greeting newcomer families in Charlotte" 
-               data-date="Bisakana Welcoming" data-tag="Bisakana Day">
+               data-caption="Welcome to Bisakana Day: Festive welcoming arch, balloons, and joyful smiles greeting newcomer families in Charlotte"
+               data-caption-en="Welcome to Bisakana Day: Festive welcoming arch, balloons, and joyful smiles greeting newcomer families in Charlotte"
+               data-caption-fr="Bienvenue au Bisakana Day : Arche d'accueil festive, ballons et sourires chaleureux accueillant les familles nouvellement arrivées à Charlotte"
+               data-date="Bisakana Welcoming"
+               data-date-en="Bisakana Welcoming"
+               data-date-fr="Accueil Bisakana"
+               data-tag="Bisakana Day">
             <img src="images/amani_bisakana_welcome_banner.jpg" 
                  alt="Welcome to Bisakana Day banner with festive balloons and happy children" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Bisakana Day</span>
-              <div class="gallery-title">Welcome to Bisakana Day</div>
+              <span class="gallery-tag" data-i18n="alb.c2_tag">Bisakana Day</span>
+              <div class="gallery-title" data-i18n="alb.c2_title">Welcome to Bisakana Day</div>
             </div>
           </div>
 
           <!-- Photo 3: Bisakana Trophy & Community Celebration -->
           <div class="gallery-card fade-up" data-category="bisakana" 
                data-src="images/amani_bisakana_trophy_celebration.jpg" 
-               data-caption="Bisakana Day Celebration: Founder Binti Muzuri Amisi, youth, and diaspora parents gathered with pride and the Amani Kids community trophy" 
-               data-date="Community Honors" data-tag="Bisakana Day">
+               data-caption="Bisakana Day Celebration: Founder Binti Muzuri Amisi, youth, and diaspora parents gathered with pride and the Amani Kids community trophy"
+               data-caption-en="Bisakana Day Celebration: Founder Binti Muzuri Amisi, youth, and diaspora parents gathered with pride and the Amani Kids community trophy"
+               data-caption-fr="Célébration du Bisakana Day : La fondatrice Binti Muzuri Amisi, les jeunes et les parents de la diaspora réunis avec fierté autour du trophée communautaire d'Amani Kids"
+               data-date="Community Honors"
+               data-date-en="Community Honors"
+               data-date-fr="Distinctions Communautaires"
+               data-tag="Bisakana Day">
             <img src="images/amani_bisakana_trophy_celebration.jpg" 
                  alt="Founder Binti Muzuri Amisi and newcomer children celebrating with trophy at Bisakana Day" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Bisakana Day</span>
-              <div class="gallery-title">Community Celebration & Trophy Pride</div>
+              <span class="gallery-tag" data-i18n="alb.c3_tag">Bisakana Day</span>
+              <div class="gallery-title" data-i18n="alb.c3_title">Community Celebration & Trophy Pride</div>
             </div>
           </div>
 
           <!-- Photo 4: Bisakana Face Painting & Joy -->
           <div class="gallery-card fade-up" data-category="bisakana" 
                data-src="images/amani_bisakana_face_painting.jpg" 
-               data-caption="Bisakana Day Joy: Creative face-painting and festive activities shared by children, mentors, and event staff" 
-               data-date="Youth Activities" data-tag="Bisakana Day">
+               data-caption="Bisakana Day Joy: Creative face-painting and festive activities shared by children, mentors, and event staff"
+               data-caption-en="Bisakana Day Joy: Creative face-painting and festive activities shared by children, mentors, and event staff"
+               data-caption-fr="Joie du Bisakana Day : Maquillage créatif et activités festives partagés par les enfants, les mentors et l'équipe d'animation"
+               data-date="Youth Activities"
+               data-date-en="Youth Activities"
+               data-date-fr="Activités Jeunesse"
+               data-tag="Bisakana Day">
             <img src="images/amani_bisakana_face_painting.jpg" 
                  alt="Children with painted faces and staff member smiling warmly at Bisakana Day" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Bisakana Day</span>
-              <div class="gallery-title">Face Painting & Childhood Joy</div>
+              <span class="gallery-tag" data-i18n="alb.c4_tag">Bisakana Day</span>
+              <div class="gallery-title" data-i18n="alb.c4_title">Face Painting & Childhood Joy</div>
             </div>
           </div>
 
           <!-- Photo 5: Bisakana Community Lawn Gathering -->
           <div class="gallery-card fade-up" data-category="bisakana" 
                data-src="images/amani_bisakana_community_lawn.jpg" 
-               data-caption="Bisakana Day Lawn Gathering: African diaspora families, children, and neighbors sharing warm fellowship under the trees in Charlotte" 
-               data-date="Outdoor Fellowship" data-tag="Bisakana Day">
+               data-caption="Bisakana Day Lawn Gathering: African diaspora families, children, and neighbors sharing warm fellowship under the trees in Charlotte"
+               data-caption-en="Bisakana Day Lawn Gathering: African diaspora families, children, and neighbors sharing warm fellowship under the trees in Charlotte"
+               data-caption-fr="Rassemblement en plein air du Bisakana Day : Familles de la diaspora africaine, enfants et voisins partageant un moment de fraternité sous les arbres à Charlotte"
+               data-date="Outdoor Fellowship"
+               data-date-en="Outdoor Fellowship"
+               data-date-fr="Fraternité en Plein Air"
+               data-tag="Bisakana Day">
             <img src="images/amani_bisakana_community_lawn.jpg" 
                  alt="African newcomer families and community members gathering on the lawn during Bisakana Day" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Bisakana Day</span>
-              <div class="gallery-title">Community Gathering & Fellowship</div>
+              <span class="gallery-tag" data-i18n="alb.c5_tag">Bisakana Day</span>
+              <div class="gallery-title" data-i18n="alb.c5_title">Community Gathering & Fellowship</div>
             </div>
           </div>
 
           <!-- Photo 6: Sauti Safe Space -->
           <div class="gallery-card fade-up" data-category="sauti" 
                data-src="images/amani_sauti_reading.jpg" 
-               data-caption="Sauti Safe Space: Youth reading circle, literacy mentoring, and storytelling in Charlotte, NC" 
-               data-date="After-School Learning" data-tag="Sauti Safe Space">
+               data-caption="Sauti Safe Space: Youth reading circle, literacy mentoring, and storytelling in Charlotte, NC"
+               data-caption-en="Sauti Safe Space: Youth reading circle, literacy mentoring, and storytelling in Charlotte, NC"
+               data-caption-fr="Espace Sûr Sauti : Cercle de lecture jeunesse, mentorat en littératie et atelier de conte à Charlotte, NC"
+               data-date="After-School Learning"
+               data-date-en="After-School Learning"
+               data-date-fr="Apprentissage Parascolaire"
+               data-tag="Sauti Safe Space">
             <img src="images/amani_sauti_reading.jpg" 
                  alt="Sauti Safe Space reading circle with children and mentor" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Sauti Safe Space</span>
-              <div class="gallery-title">Literacy Circles & Storytelling Hour</div>
+              <span class="gallery-tag" data-i18n="alb.c6_tag">Sauti Safe Space</span>
+              <div class="gallery-title" data-i18n="alb.c6_title">Literacy Circles & Storytelling Hour</div>
             </div>
           </div>
 
           <!-- Photo 7: Mentorship & Classroom Community -->
           <div class="gallery-card fade-up" data-category="family" 
                data-src="images/amani_classroom_banner.jpg" 
-               data-caption="Amani Kids Classroom Community: Youth, mentors, and staff gathered in Charlotte, NC" 
-               data-date="Community & Mentorship" data-tag="Community">
+               data-caption="Amani Kids Classroom Community: Youth, mentors, and staff gathered in Charlotte, NC"
+               data-caption-en="Amani Kids Classroom Community: Youth, mentors, and staff gathered in Charlotte, NC"
+               data-caption-fr="Communauté éducative Amani Kids : Jeunes, mentors et équipe réunis à Charlotte, NC"
+               data-date="Community & Mentorship"
+               data-date-en="Community & Mentorship"
+               data-date-fr="Communauté & Mentorat"
+               data-tag="Community">
             <img src="images/amani_classroom_banner.jpg" 
                  alt="Amani Kids youth, mentors, and leaders holding the community banner" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Mentorship & Community</span>
-              <div class="gallery-title">Intergenerational Guidance & Trust</div>
+              <span class="gallery-tag" data-i18n="alb.c7_tag">Mentorship & Community</span>
+              <div class="gallery-title" data-i18n="alb.c7_title">Intergenerational Guidance & Trust</div>
             </div>
           </div>
 
           <!-- Photo 8: International Outreach -->
           <div class="gallery-card fade-up" data-category="family" 
                data-src="images/amani_international_outreach.jpg" 
-               data-caption="Amani Kids International Outreach: Food relief, learning supplies, and cross-border solidarity with vulnerable children in Africa" 
-               data-date="International Outreach" data-tag="Global Solidarity">
+               data-caption="Amani Kids International Outreach: Food relief, learning supplies, and cross-border solidarity with vulnerable children in Africa"
+               data-caption-en="Amani Kids International Outreach: Food relief, learning supplies, and cross-border solidarity with vulnerable children in Africa"
+               data-caption-fr="Action Internationale Amani Kids : Aide alimentaire, fournitures scolaires et solidarité transfrontalière auprès des enfants vulnérables en Afrique"
+               data-date="International Outreach"
+               data-date-en="International Outreach"
+               data-date-fr="Action Internationale"
+               data-tag="Global Solidarity">
             <img src="images/amani_international_outreach.jpg" 
                  alt="Amani Kids International Outreach initiative supporting children and schools in Africa" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Global Solidarity</span>
-              <div class="gallery-title">International Outreach & Solidarity</div>
+              <span class="gallery-tag" data-i18n="alb.c8_tag">Global Solidarity</span>
+              <div class="gallery-title" data-i18n="alb.c8_title">International Outreach & Solidarity</div>
             </div>
           </div>
 
           <!-- Photo 9: Amani Connect Family Circle -->
           <div class="gallery-card fade-up" data-category="family" 
                data-src="images/amani_connect_family.jpg" 
-               data-caption="Amani Connect: African newcomer families, children with flags, and mentors celebrating together in Charlotte, NC" 
-               data-date="Family Navigation" data-tag="Amani Connect">
+               data-caption="Amani Connect: African newcomer families, children with flags, and mentors celebrating together in Charlotte, NC"
+               data-caption-en="Amani Connect: African newcomer families, children with flags, and mentors celebrating together in Charlotte, NC"
+               data-caption-fr="Amani Connect : Familles africaines nouvellement arrivées, enfants avec drapeaux et mentors célébrant ensemble à Charlotte, NC"
+               data-date="Family Navigation"
+               data-date-en="Family Navigation"
+               data-date-fr="Accompagnement Familial"
+               data-tag="Amani Connect">
             <img src="images/amani_connect_family.jpg" 
                  alt="Amani Connect newcomer families, children with flags, and mentors in Charlotte NC" loading="lazy">
             <div class="gallery-overlay">
-              <span class="gallery-tag">Amani Connect</span>
-              <div class="gallery-title">Bilingual Navigation & Family Solidarity</div>
+              <span class="gallery-tag" data-i18n="alb.c9_tag">Amani Connect</span>
+              <div class="gallery-title" data-i18n="alb.c9_title">Bilingual Navigation & Family Solidarity</div>
             </div>
           </div>
 
@@ -502,12 +546,12 @@
     <!-- INVITATION TO SHARE MEMORIES -->
     <section class="section-padding bg-warm-alt">
       <div class="container container-narrow text-center fade-up">
-        <div class="eyebrow">CONTRIBUTE TO OUR ARCHIVE</div>
-        <h2 class="section-title">Do you have community photos to share?</h2>
-        <p class="lead-text" style="margin: 0 auto 2.5rem;">
+        <div class="eyebrow" data-i18n="alb.contrib_eyebrow">CONTRIBUTE TO OUR ARCHIVE</div>
+        <h2 class="section-title" data-i18n="alb.contrib_title">Do you have community photos to share?</h2>
+        <p class="lead-text" style="margin: 0 auto 2.5rem;" data-i18n="alb.contrib_lead">
           If you attended Bisakana Day, a Sauti youth session, or a community circle, send your high-resolution photos to our media archive team.
         </p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Submit Community Photos</a>
+        <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="alb.contrib_btn">Submit Community Photos</a>
       </div>
     </section>
 
@@ -528,7 +572,7 @@
 
   </main>
 
-    <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-compact-grid">
@@ -538,16 +582,16 @@
           <a href="index.html" class="footer-logo-card notranslate" translate="no" aria-label="AMANI KIDS Home">
             <img src="images/amani_logo.png" alt="AMANI KIDS - Peace Love and Joy" class="site-logo-img">
           </a>
-          <p>
+          <p data-i18n="footer.desc">
             Connecting African refugee, immigrant, and newcomer families with trusted resources, cultural belonging, and educational support to help them thrive in Charlotte, NC.
           </p>
-          <div class="footer-status notranslate" translate="no">
+          <div class="footer-status" data-i18n="footer.status">
             501(c)(3) Nonprofit • Serving Charlotte Families
           </div>
         
           <!-- Official Social Media Channels -->
           <div class="footer-social-strip">
-            <h5 class="footer-social-heading">Follow Our Journey</h5>
+            <h5 class="footer-social-heading" data-i18n="footer.social_heading">Follow Our Journey</h5>
             <div class="social-links" aria-label="Official Social Media Links">
               <a href="https://www.facebook.com/profile.php?id=100085364216384" target="_blank" rel="noopener noreferrer" class="social-link-btn facebook" aria-label="Facebook (Amani Kids)">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -569,10 +613,10 @@
         </div>
 
         <!-- Official Coordinates Card -->
-        <div class="footer-contact-card notranslate" translate="no">
+        <div class="footer-contact-card">
           <div class="footer-contact-card-title">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Headquarters & Contacts</span>
+            <span data-i18n="footer.hq_title">Headquarters & Contacts</span>
           </div>
           
           <div class="footer-contact-items">
@@ -582,7 +626,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </span>
               <div>
-                <span class="footer-contact-label">Our Address</span>
+                <span class="footer-contact-label" data-i18n="footer.address_label">Our Address</span>
                 <span class="footer-contact-val">3400 Shamrock Dr., Suite D, Charlotte, NC 28215</span>
               </div>
             </div>
@@ -593,7 +637,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </span>
               <div>
-                <span class="footer-contact-label">Direct Phone</span>
+                <span class="footer-contact-label" data-i18n="footer.phone_label">Direct Phone</span>
                 <a href="tel:+17048662930" class="footer-contact-val">+1 (704) 866-2930</a>
               </div>
             </div>
@@ -604,7 +648,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               </span>
               <div>
-                <span class="footer-contact-label">Official Email</span>
+                <span class="footer-contact-label" data-i18n="footer.email_label">Official Email</span>
                 <a href="mailto:amanikids@amanikidsnc.org" class="footer-contact-val">amanikids@amanikidsnc.org</a>
               </div>
             </div>
@@ -613,17 +657,17 @@
 
       </div>
 
-            <!-- Legal & Copyright -->
+      <!-- Legal & Copyright -->
       <div class="footer-bottom">
         <div>
-          &copy; <span class="current-year">2026</span> AMANI KIDS INC. All rights reserved. 501(c)(3) Nonprofit.
+          &copy; <span class="current-year">2026</span> AMANI KIDS INC. <span data-i18n="footer.rights_short">All rights reserved. 501(c)(3) Nonprofit.</span>
         </div>
         <div class="footer-bottom-links">
-          <a href="get-support.html">Privacy & Dignity</a>
-          <a href="donate.html">Donate</a>
-          <a href="volunteer.html">Volunteer</a>
-          <a href="partnerships.html">Partnerships</a>
-          <a href="contact.html">Contact Us</a>
+          <a href="get-support.html" data-i18n="footer.link_privacy">Privacy & Dignity</a>
+          <a href="donate.html" data-i18n="footer.link_donate">Donate</a>
+          <a href="volunteer.html" data-i18n="footer.link_volunteer">Volunteer</a>
+          <a href="partnerships.html" data-i18n="footer.link_partnerships">Partnerships</a>
+          <a href="contact.html" data-i18n="footer.link_contact">Contact Us</a>
         </div>
       </div>
     </div>
@@ -657,30 +701,44 @@
         });
       });
 
-      // 2. Lightbox Modal
+      // 2. Lightbox Modal (Bilingual Support)
       const modal = document.getElementById('lightbox');
       const modalImg = document.getElementById('lightbox-img');
       const modalTitle = document.getElementById('lightbox-title');
       const modalDesc = document.getElementById('lightbox-desc');
       const modalDate = document.getElementById('lightbox-date');
       const closeBtn = document.getElementById('lightbox-close');
+      let currentCard = null;
+
+      const updateLightboxContent = (card) => {
+        if (!card) return;
+        const lang = document.documentElement.lang === 'fr' ? 'fr' : 'en';
+        const src = card.getAttribute('data-src');
+        const title = card.querySelector('.gallery-title').textContent;
+        const desc = card.getAttribute('data-caption-' + lang) || card.getAttribute('data-caption');
+        const date = card.getAttribute('data-date-' + lang) || card.getAttribute('data-date');
+
+        modalImg.src = src;
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        modalDate.textContent = date;
+      };
 
       cards.forEach(card => {
         card.addEventListener('click', () => {
-          const src = card.getAttribute('data-src');
-          const title = card.querySelector('.gallery-title').textContent;
-          const desc = card.getAttribute('data-caption');
-          const date = card.getAttribute('data-date');
-
-          modalImg.src = src;
-          modalTitle.textContent = title;
-          modalDesc.textContent = desc;
-          modalDate.textContent = date;
+          currentCard = card;
+          updateLightboxContent(card);
 
           modal.classList.add('active');
           modal.setAttribute('aria-hidden', 'false');
           document.body.style.overflow = 'hidden';
         });
+      });
+
+      document.addEventListener('amani:languageChanged', () => {
+        if (modal && modal.classList.contains('active') && currentCard) {
+          updateLightboxContent(currentCard);
+        }
       });
 
       const closeModal = () => {
@@ -703,7 +761,7 @@
     });
   </script>
 
-    <!-- ULTRA-PREMIUM MOBILE BOTTOM APP BAR (Dock façon App Native) -->
+  <!-- ULTRA-PREMIUM MOBILE BOTTOM APP BAR (Dock façon App Native) -->
   <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
     <a href="index.html" class="mobile-bottom-tab" aria-label="Home">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
