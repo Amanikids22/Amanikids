@@ -522,6 +522,7 @@ const AMANI_I18N = {
     'st.s1_p3': 'Through this connection, the children gained access to additional learning support and an environment where they could continue developing their language skills and building confidence.',
     'st.s1_impact_label': 'THE IMPACT',
     'st.s1_impact_text': 'By connecting families with the right educational resources, we help children overcome barriers and create pathways toward academic success.',
+    'st.s1_img_caption': 'A newcomer family connected with essential school supplies, backpacks, and bilingual after-school learning support in Charlotte, NC.',
 
     // Story 02
     'st.s2_num': 'STORY 02',
@@ -1439,6 +1440,7 @@ const AMANI_I18N = {
     'st.s1_p3': 'Grâce à ce relais, les enfants ont pu bénéficier d\'un accompagnement pédagogique renforcé et d\'un environnement bienveillant où ils ont continué à développer leurs compétences linguistiques et à reprendre confiance en eux.',
     'st.s1_impact_label': 'L’IMPACT RÉALISÉ',
     'st.s1_impact_text': 'En reliant les familles aux ressources éducatives adaptées, nous aidons les enfants à surmonter les obstacles et nous ouvrons des voies durables vers la réussite scolaire.',
+    'st.s1_img_caption': 'Une famille nouvellement arrivée recevant des fournitures scolaires, des cartables et un accompagnement éducatif périscolaire à Charlotte, NC.',
 
     // Story 02
     'st.s2_num': 'RÉCIT 02',

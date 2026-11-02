@@ -5663,3 +5663,67 @@ textarea.form-control {
     height: 220px;
   }
 }
+
+/* ==========================================================================
+   STORY 01: EDITORIAL PHOTOGRAPH INTEGRATION
+   ========================================================================== */
+.story-editorial-media {
+  margin: 2.25rem auto 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 620px;
+  width: 100%;
+}
+
+.story-media-frame {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 28px rgba(30, 58, 47, 0.06);
+  background: var(--color-surface-alt);
+}
+
+.story-media-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.story-editorial-media:hover .story-media-img {
+  transform: scale(1.02);
+}
+
+.story-media-caption {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  padding: 0 0.5rem;
+}
+
+.story-media-caption .caption-marker {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.story-media-caption .caption-text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .story-media-frame {
+    border-radius: var(--radius-lg);
+  }
+  .story-media-caption {
+    font-size: 0.8125rem;
+  }
+}
