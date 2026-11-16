@@ -926,8 +926,65 @@ const AMANI_I18N = {
     'con.opt_media': 'Media & Community Speaking',
     'con.f_msg': 'Message *',
     'con.ph_msg': 'How can we assist you?',
-    'con.f_submit': 'Send Message'
+    'con.f_submit': 'Send Message',
+
+    // Founder Story Dedicated Page (/founder-story)
+    'founder.badge': 'FOUNDER & EXECUTIVE DIRECTOR',
+    'founder.hero_eyebrow': "LEADERSHIP & VISION",
+    'founder.hero_title': "From Lived Journey to Lifelong Mission: Binti Muzuri Amisi",
+    'founder.hero_p1': "Binti Muzuri Amisi founded Amani Kids Inc. not out of an academic exercise in social work, but out of the raw reality of arriving in the United States from the Democratic Republic of the Congo.",
+    'founder.hero_p2': "Today, she leads Amani Kids Inc. as Executive Director, guiding an organization dedicated to connecting African refugee, immigrant, and newcomer children and families to vital resources, educational opportunities, and community wellbeing in Charlotte, North Carolina.",
+    
+    'founder.roots_eyebrow': "HER ROOTS & JOURNEY",
+    'founder.roots_title': "From the Democratic Republic of the Congo to Charlotte",
+    'founder.roots_p1': "In the Democratic Republic of the Congo, Binti earned her degree in International Public Law and worked as a lawyer, specializing in child protection and family law. Her commitment to advocating for vulnerable children and families was already the defining cornerstone of her professional life.",
+    'founder.roots_p2': "Upon arriving in the United States and resettling in Charlotte, North Carolina, Binti experienced firsthand the deep challenges of international transition: complex systems, language shock, and the disorientation of rebuilding a life from the ground up while raising young children.",
+    'founder.roots_p3': "In those early months, the weight of resettlement was compounded by the silence and isolation that so often accompany newcomers navigating unfamiliar bus routes, school systems, and public offices without an established cultural community.",
+
+    'founder.giving_eyebrow': "SOLIDARITY & INTEGRATION",
+    'founder.giving_title': "From Receiving Support to Higher Education",
+    'founder.giving_img_caption': "Binti speaking at International House in Charlotte, reflecting on community partnership and the power of welcoming newcomers.",
+    'founder.giving_p1': "During her initial integration in Charlotte, International House played a pivotal role in Binti's journey, providing English language classes and essential guidance that helped her adapt to her new environment.",
+    'founder.giving_p2': "Empowered by this foundational support, Binti pursued higher education in early childhood development at Central Piedmont Community College (CPCC). Demonstrating natural leadership, she served as President of the Early Childhood Club from Fall 2023 through Spring 2024, and graduated from CPCC in Spring 2024 with her degree in Early Childhood Education.",
+
+    'founder.purpose_eyebrow': "COMMUNITY SERVICE & VOLUNTEERING",
+    'founder.purpose_title': "Finding Purpose Through Volunteer Service",
+    'founder.purpose_p1': "Driven by a lifelong calling to serve children, Binti actively dedicated her time as a volunteer with three prominent local refugee and immigrant support organizations: OurBRIDGE for Kids, Refugee Support Services, and Carolina Refugee Resettlement Agency.",
+    'founder.purpose_p2': "Through these volunteering roles, she worked directly alongside newcomer families and youth, witnessing firsthand how language barriers and institutional unfamiliarity caused brilliant children to struggle in classrooms and hardworking parents to feel disempowered.",
+    'founder.purpose_p3': "This extensive volunteer service crystallized her purpose: informal assistance was vital, but newcomer families needed an enduring, culturally grounded institutional bridge created by someone who shared their language, culture, and lived resettlement journey.",
+
+    'founder.birth_eyebrow': "BUILDING THE BRIDGE",
+    'founder.birth_title': "The Birth of Amani Kids Inc.",
+    'founder.birth_p1': "In June 2023, Binti brought this vision to life by founding Amani Kids Inc. The name reflects the essential heart of its mission: 'Amani' means Peace in Swahili.",
+    'founder.birth_p2': "Her founding premise was simple yet transformative: when you eliminate the fear of the unknown and bridge the cultural divide, immigrant and refugee children and their parents can finally exhale, heal, and begin to flourish.",
+    'founder.birth_p3': "Amani Kids Inc. was established as a grassroots nonprofit organization in Charlotte, dedicated to supporting African newcomer youth and families through educational guidance, cultural belonging, and essential resource navigation.",
+
+    'founder.quote_text': "I was once someone who needed a bridge. Today, through Amani Kids, I am committed to building bridges for others.",
+    'founder.quote_author': "— Binti Muzuri Amisi, Founder & Executive Director",
+
+    'founder.recognition_eyebrow': "AWARDS & PROFESSIONAL RECOGNITION",
+    'founder.recognition_title': "Recognition and Professional Achievements",
+    'founder.recognition_img_caption': "Binti proudly holding 'Our Children’s Champion Award — BCDI-Carolinas 2024' alongside her partner, celebrating dedication to children and newcomer families.",
+    'founder.recognition_p1': "Binti’s steadfast leadership and selfless community service have earned deep trust and civic recognition across North Carolina. In 2024, she was honored with the prestigious 'Our Children’s Champion Award' by BCDI-Carolinas (Black Child Development Institute–Carolinas), celebrating leaders who demonstrate exemplary dedication to the education and wellbeing of children.",
+    'founder.recognition_p2': "Professionally, Binti serves as an educator at Merryoaks International Academy within Charlotte-Mecklenburg Schools (CMS). In May 2026, her exceptional commitment to her students and excellence in classroom instruction earned her the nomination for Beginning Teacher of the Year.",
+    'founder.recognition_p3': "Rather than viewing these honors as personal milestones, Binti embraces them as a testament to the resilience of every African newcomer family working toward a bright future for their children.",
+
+    'founder.vision_eyebrow': "LOOKING FORWARD",
+    'founder.vision_title': "My Vision: Turning Challenges into Opportunities",
+    'founder.vision_p1': "For Binti, the resettlement journey is not a story of deficit, but one of immense cultural, intellectual, and human strength. She envisions a Charlotte where every immigrant and refugee child celebrates their dual heritage with pride, and where multilingualism is recognized as a vital superpower.",
+    'founder.vision_p2': "\"Our children bring multilingual gifts, global perspectives, and extraordinary resilience,\" Binti affirms. \"When we provide them with the right educational tools, mentorship, and a community that believes in them, there is no limit to what they can achieve.\"",
+    'founder.vision_p3': "Her vision for Amani Kids Inc. remains steadfast: ensuring that every newcomer family is met with dignity, understanding, and the educational opportunities needed to flourish for generations to come.",
+
+    'founder.cta_eyebrow': "STAND WITH US",
+    'founder.cta_title': "Walk Alongside Binti and Amani Kids",
+    'founder.cta_lead': "Every newcomer child deserves a welcoming community, academic support, and the peace to flourish. Whether through financial contribution or volunteer mentorship, your partnership changes lives.",
+    'founder.cta_donate_btn': "Support Our Mission with a Donation",
+    'founder.cta_volunteer_btn': "Volunteer as a Youth Mentor",
+    'founder.footer_tax': "Grassroots Nonprofit Organization",
+    'founder.footer_rights': "All rights reserved. Nonprofit Organization.",
+    'about.founder_read_full_story': "Read Binti's Full Journey"
   },
+
   fr: {
     // Navigation & Global Header / Drawer / Bottom Dock
     'nav.home': 'Accueil',
@@ -1849,11 +1906,86 @@ const AMANI_I18N = {
     'con.opt_media': 'Médias & Interventions Communautaires',
     'con.f_msg': 'Message *',
     'con.ph_msg': 'Comment pouvons-nous vous aider ?',
-    'con.f_submit': 'Envoyer le Message'
+    'con.f_submit': 'Envoyer le Message',
+    // Founder Story Dedicated Page (/founder-story)
+    'founder.badge': 'FONDATRICE & DIRECTRICE EXÉCUTIVE',
+    'founder.hero_eyebrow': "LEADERSHIP & VISION",
+    'founder.hero_title': "D'un Parcours Vécu à une Mission de Vie : Binti Muzuri Amisi",
+    'founder.hero_p1': "Binti Muzuri Amisi a fondé Amani Kids Inc. non pas à partir d’un exercice théorique de travail social, mais à partir de la réalité directe de son arrivée aux États-Unis depuis la République démocratique du Congo.",
+    'founder.hero_p2': "Aujourd’hui, elle dirige Amani Kids Inc. en tant que directrice générale, guidant une organisation dédiée à relier les enfants et familles africaines réfugiées, immigrées et nouvellement arrivées à des ressources essentielles, des opportunités éducatives et au bien-être communautaire à Charlotte, en Caroline du Nord.",
+    
+    'founder.roots_eyebrow': "SES RACINES ET SON PARCOURS",
+    'founder.roots_title': "De la République Démocratique du Congo à Charlotte",
+    'founder.roots_p1': "En République démocratique du Congo, Binti a obtenu son diplôme en droit international public et a exercé comme juriste, spécialisée dans la protection de l'enfance et le droit de la famille. Son engagement envers la défense des enfants et des familles vulnérables constituait déjà le socle de sa vie professionnelle.",
+    'founder.roots_p2': "À son arrivée aux États-Unis et lors de sa réinstallation à Charlotte, en Caroline du Nord, Binti a vécu de première main les défis profonds de la transition internationale : des démarches complexes, le choc linguistique et la désorientation de devoir reconstruire une vie entière avec de jeunes enfants.",
+    'founder.roots_p3': "Durant ses premiers mois, le poids de la réinstallation était accentué par le silence et l’isolement qui accompagnent si souvent les nouveaux arrivants apprenant à apprivoiser des lignes de bus inconnues, des systèmes scolaires déroutants et des bureaux administratifs sans communauté culturelle établie.",
+
+    'founder.giving_eyebrow': "SOLIDARITÉ ET INTÉGRATION",
+    'founder.giving_title': "Du Soutien Reçu aux Études Supérieures",
+    'founder.giving_img_caption': "Binti s’exprimant au pupitre d’International House à Charlotte, témoignant sur le partenariat communautaire et la force d’un accueil bienveillant.",
+    'founder.giving_p1': "Au cours de son intégration initiale à Charlotte, International House a joué un rôle déterminant dans son parcours, lui offrant des cours d’anglais et un accompagnement essentiel pour l'aider à s'adapter à son nouvel environnement.",
+    'founder.giving_p2': "Forte de cet appui fondamental, Binti a poursuivi ses études supérieures en éducation de la petite enfance au Central Piedmont Community College (CPCC). Faisant preuve d’un leadership naturel, elle a exercé les fonctions de présidente du Early Childhood Club de l'automne 2023 au printemps 2024, et a obtenu son diplôme du CPCC au printemps 2024.",
+
+    'founder.purpose_eyebrow': "SERVICE COMMUNAUTAIRE ET BÉNÉVOLAT",
+    'founder.purpose_title': "Trouver sa Vocation dans le Bénévolat de Terrain",
+    'founder.purpose_p1': "Animée par sa vocation envers l'enfance, Binti a activement consacré son temps comme bénévole auprès de trois organisations locales de soutien aux réfugiés et immigrants : OurBRIDGE for Kids, Refugee Support Services, et Carolina Refugee Resettlement Agency.",
+    'founder.purpose_p2': "À travers ces engagements bénévoles, elle a œuvré directement aux côtés des familles et des jeunes nouveaux arrivants, constatant de visu à quel point les barrières linguistiques et institutionnelles freinaient des enfants brillants et laissaient des parents travailleurs isolés.",
+    'founder.purpose_p3': "Ce service bénévole sur le terrain a confirmé sa mission de vie : l’aide informelle était indispensable, mais les familles avaient besoin d’un pont institutionnel durable, créé par une personne partageant leur langue, leur culture et leur parcours de réinstallation.",
+
+    'founder.birth_eyebrow': "BÂTIR LE PONT",
+    'founder.birth_title': "La Naissance d’Amani Kids Inc.",
+    'founder.birth_p1': "En juin 2023, Binti a concrétisé cette vision en fondant Amani Kids Inc. Le nom lui-même porte le cœur de sa mission : « Amani » signifie Paix en swahili.",
+    'founder.birth_p2': "Sa conviction fondatrice est simple et transformatrice : lorsque vous dissipez la peur de l’inconnu et comblez le fossé culturel, les enfants et parents réfugiés et immigrés peuvent enfin respirer, guérir et commencer à s’épanouir.",
+    'founder.birth_p3': "Amani Kids Inc. a été établi en tant qu'organisation communautaire à but non lucratif à Charlotte, dédiée à soutenir la jeunesse et les familles africaines nouvellement arrivées par l’accompagnement éducatif, l’appartenance culturelle et l’accès aux ressources essentielles.",
+
+    'founder.quote_text': "J'ai été autrefois une personne qui avait besoin d'un pont. Aujourd'hui, à travers Amani Kids, je m'engage à bâtir des ponts pour les autres.",
+    'founder.quote_author': "— Binti Muzuri Amisi, Fondatrice & Directrice Exécutive",
+
+    'founder.recognition_eyebrow': "DISTINCTIONS ET RECONNAISSANCE PROFESSIONNELLE",
+    'founder.recognition_title': "Reconnaissance et Distinctions Professionnelles",
+    'founder.recognition_img_caption': "Binti tenant avec fierté le trophée « Our Children’s Champion Award — BCDI-Carolinas 2024 », célébrant son dévouement envers les enfants et les familles.",
+    'founder.recognition_p1': "Le dévouement exemplaire de Binti et son engagement communautaire ont suscité une profonde confiance et une reconnaissance civique à travers la Caroline du Nord. En 2024, elle a reçu le prestigieux trophée « Our Children's Champion Award » décerné par BCDI-Carolinas (Black Child Development Institute–Carolinas).",
+    'founder.recognition_p2': "Sur le plan professionnel, Binti enseigne à la Merryoaks International Academy au sein de Charlotte-Mecklenburg Schools (CMS). En mai 2026, son investissement remarquable auprès de ses élèves et son excellence pédagogique lui ont valu d’être nommée pour le prix de Beginning Teacher of the Year.",
+    'founder.recognition_p3': "Loin de considérer ces distinctions comme des accomplissements individuels, Binti les dédie à la résilience de chaque famille africaine nouvellement arrivée qui œuvre pour bâtir un avenir prometteur pour ses enfants.",
+
+    'founder.vision_eyebrow': "NOTRE VISION D’AVENIR",
+    'founder.vision_title': "Ma Vision : Transformer les Épreuves en Opportunités",
+    'founder.vision_p1': "Pour Binti, le parcours de réinstallation n'est pas une histoire de manque, mais une histoire d'immense force culturelle, intellectuelle et humaine. Elle imagine une communauté où chaque enfant immigré et réfugié célèbre son héritage avec fierté, et où le multilinguisme est reconnu comme un atout majeur.",
+    'founder.vision_p2': "« Nos enfants apportent avec eux des compétences multilingues, des perspectives internationales et une résilience extraordinaire », affirme Binti. « Lorsque nous leur offrons les bons outils éducatifs, des encouragements bienveillants et une communauté qui croit en eux, il n'y a aucune limite à ce qu'ils peuvent accomplir. »",
+    'founder.vision_p3': "Sa vision pour Amani Kids Inc. demeure inébranlable : veiller à ce que chaque famille nouvellement arrivée soit accueillie avec dignité, écoute et les opportunités éducatives nécessaires pour s'épanouir sur plusieurs générations.",
+
+    'founder.cta_eyebrow': "ENGAGEZ-VOUS AVEC NOUS",
+    'founder.cta_title': "Engagez-vous aux Côtés de Binti et d’Amani Kids",
+    'founder.cta_lead': "Chaque enfant nouvellement arrivé mérite une communauté accueillante, un soutien scolaire solide et la paix nécessaire pour s’épanouir. Que ce soit par une contribution financière ou par le mentorat bénévole, votre engagement transforme des vies.",
+    'founder.cta_donate_btn': "Soutenir Notre Mission par un Don",
+    'founder.cta_volunteer_btn': "Devenir Mentor Bénévole",
+    'founder.footer_tax': "Organisation communautaire à but non lucratif",
+    'founder.footer_rights': "Tous droits réservés. Organisation à but non lucratif.",
+    'about.founder_read_full_story': "Découvrir le parcours complet de Binti"
   }
 };
 
 const AMANI_SEO = {
+  'founder-story.html': {
+    en: {
+      title: "Founder's Story: Binti Muzuri Amisi — AMANI KIDS | Charlotte, NC",
+      description: "Discover the journey of Binti Muzuri Amisi, Founder & Executive Director of Amani Kids, from Congolese resettlement to Children's Champion Award recipient in Charlotte, NC."
+    },
+    fr: {
+      title: "Histoire de la Fondatrice : Binti Muzuri Amisi — AMANI KIDS | Charlotte, NC",
+      description: "Découvrez le parcours de Binti Muzuri Amisi, fondatrice et directrice exécutive d'Amani Kids, de son arrivée de RDC à son engagement civique primé à Charlotte, NC."
+    }
+  },
+  'founder-story': {
+    en: {
+      title: "Founder's Story: Binti Muzuri Amisi — AMANI KIDS | Charlotte, NC",
+      description: "Discover the journey of Binti Muzuri Amisi, Founder & Executive Director of Amani Kids, from Congolese resettlement to Children's Champion Award recipient in Charlotte, NC."
+    },
+    fr: {
+      title: "Histoire de la Fondatrice : Binti Muzuri Amisi — AMANI KIDS | Charlotte, NC",
+      description: "Découvrez le parcours de Binti Muzuri Amisi, fondatrice et directrice exécutive d'Amani Kids, de son arrivée de RDC à son engagement civique primé à Charlotte, NC."
+    }
+  },
   'index.html': {
     en: {
       title: 'AMANI KIDS — Empowering Children, Strengthening Families, Building Communities | Charlotte, NC',
