@@ -32,17 +32,21 @@
   <style>
     /* Scoped Editorial Styles for Founder Story */
     .founder-page-hero {
-      padding: clamp(3rem, 6vw, 5rem) 0 clamp(2.5rem, 5vw, 4rem);
+      padding-top: calc(var(--header-height, 84px) + clamp(1.75rem, 3.5vw, 3rem));
+      padding-bottom: clamp(2.5rem, 5vw, 4rem);
     }
 
     .founder-breadcrumbs {
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 0.5rem;
       font-size: 0.8125rem;
-      font-family: var(--font-mono);
+      font-family: var(--font-primary);
+      font-weight: 500;
       color: var(--color-text-muted);
-      margin-bottom: 2rem;
+      line-height: 1.4;
+      margin-bottom: 1.75rem;
     }
 
     .founder-breadcrumbs a {
@@ -55,22 +59,56 @@
       color: var(--color-primary);
     }
 
-    .founder-media-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(2rem, 5vw, 4.5rem);
-      align-items: center;
+    .founder-breadcrumbs .breadcrumb-sep {
+      color: var(--color-border);
+      opacity: 0.85;
+      font-size: 0.75rem;
     }
 
-    .founder-media-grid.reverse {
-      grid-template-columns: 1fr 1fr;
+    .founder-breadcrumbs .breadcrumb-current {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: start;
     }
 
     @media (max-width: 900px) {
+      .founder-page-hero {
+        padding-top: calc(var(--header-height, 64px) + 1.75rem);
+      }
+      .founder-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .founder-content {
+        order: 1;
+      }
+      .founder-portrait-wrapper {
+        order: 2;
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto;
+      }
       .founder-media-grid,
       .founder-media-grid.reverse {
         grid-template-columns: 1fr;
         gap: 2rem;
+      }
+      .founder-media-grid.reverse {
+        display: flex;
+        flex-direction: column;
+      }
+      .founder-media-grid.reverse .founder-text-narrative {
+        order: 1;
+      }
+      .founder-media-grid.reverse .founder-editorial-card {
+        order: 2;
       }
     }
 
@@ -520,15 +558,15 @@
     <!-- ========================================================================
          SECTION 1: MEET OUR FOUNDER: BINTI MUZURI AMISI
          ======================================================================== -->
-    <section class="founder-page-hero section-padding">
+    <section class="founder-page-hero">
       <div class="container">
         <!-- Breadcrumbs -->
         <nav class="founder-breadcrumbs" aria-label="Breadcrumb">
           <a href="index.html" data-i18n="nav.home">Home</a>
-          <span aria-hidden="true">/</span>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
           <a href="about.html" data-i18n="nav.about">About</a>
-          <span aria-hidden="true">/</span>
-          <span style="color: var(--color-primary); font-weight: 700;">Binti Muzuri Amisi</span>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span class="breadcrumb-current notranslate" translate="no">Binti Muzuri Amisi</span>
         </nav>
 
         <div class="founder-grid">

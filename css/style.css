@@ -94,6 +94,7 @@
 
   /* Typography */
   --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-mono: 'JetBrains Mono', monospace;
 
@@ -326,9 +327,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title {
   font-size: clamp(2rem, 3.8vw, 2.875rem);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
   margin-bottom: 1.25rem;
+  text-wrap: balance;
 }
 
 .lead-text {
@@ -1283,7 +1285,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   body {
-    padding-bottom: calc(var(--mobile-bottom-bar-height) + var(--sab) + 12px) !important;
+    padding-bottom: calc(var(--mobile-bottom-bar-height) + var(--sab) + 16px) !important;
   }
 }
 
@@ -3116,7 +3118,7 @@ textarea.form-control {
    22. SUB-PAGE HERO & BREADCRUMBS
    -------------------------------------------------------------------------- */
 .page-hero {
-  padding-top: calc(var(--header-height) + 3.5rem);
+  padding-top: calc(var(--header-height, 84px) + clamp(2.5rem, 5vw, 3.5rem));
   padding-bottom: clamp(3rem, 5vw, 4.5rem);
   background: linear-gradient(to bottom, var(--color-bg) 0%, var(--color-bg-alt) 100%);
   border-bottom: 1px solid var(--color-border);
@@ -3131,6 +3133,51 @@ textarea.form-control {
 .page-hero-title {
   font-size: clamp(2.5rem, 4.5vw, 3.75rem);
   margin-bottom: 1rem;
+}
+
+/* Institutional Breadcrumbs Standard */
+.breadcrumbs,
+.page-breadcrumbs,
+.founder-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumbs a,
+.page-breadcrumbs a,
+.founder-breadcrumbs a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover,
+.page-breadcrumbs a:hover,
+.founder-breadcrumbs a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbs .breadcrumb-sep,
+.page-breadcrumbs .breadcrumb-sep,
+.founder-breadcrumbs .breadcrumb-sep {
+  color: var(--color-border);
+  opacity: 0.85;
+  font-size: 0.75rem;
+}
+
+.breadcrumbs .breadcrumb-current,
+.page-breadcrumbs .breadcrumb-current,
+.founder-breadcrumbs .breadcrumb-current {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
